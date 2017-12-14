@@ -18,6 +18,7 @@ public class GameState : MonoBehaviour
     private float waitingReactionTimer;
     private int lastWaitingReactionIndex = -1;
     private bool enableWaitingReaction = false;
+    private bool canAnswer = false;
 
     public static GameState instance;
     
@@ -56,11 +57,16 @@ public class GameState : MonoBehaviour
         yield return DisplayText(question, currentQuestion.question, false, false);
         lastWaitingReactionIndex = 0;
         ResetWaitingReactionTimer();
+        canAnswer = true;
         //spawn game, fade ?
     }
 
     public void Answer(string anwser)
     {
+        if (!canAnswer)
+            return;
+
+        canAnswer = false;
         StopAllCoroutines();
         reaction.text = null;
         currentResponse = currentQuestion.responses.First(r => string.Equals(r.text, anwser));
@@ -98,6 +104,7 @@ public class GameState : MonoBehaviour
         {
             ResetWaitingReactionTimer();
             //restart game
+            canAnswer = true;
         }
     }
 
