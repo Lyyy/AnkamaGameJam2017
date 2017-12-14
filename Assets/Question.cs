@@ -8,6 +8,10 @@ public class Question : ScriptableObject
     public Response[] responses;
     public GameObject game;
     [Multiline]
-    public string[] globalReactions;
+    public string globalReaction;
+    [Multiline]
+    public string[] randomReactions;
+    public float minRandomDuration;
+    public float maxRandomDuration;
     public Question globalNextQuestion;
 }

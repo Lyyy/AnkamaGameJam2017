@@ -13,9 +13,11 @@ public class GameState : MonoBehaviour
     public Button[] debugButtons;
 
     private Animator animator;
-
     private Question currentQuestion;
     private Response currentResponse;
+    private float randomReactionTimer;
+    private int lastRandomReactionIndex = -1;
+    private bool enableRandomReaction = false;
 
     public static GameState instance;
     
@@ -27,6 +29,7 @@ public class GameState : MonoBehaviour
         debugPanel.SetActive(Application.isEditor);
         foreach (var button in debugButtons)
             button.onClick.AddListener(() => Answer(button.GetComponentInChildren<Text>().text));
+        PrepareNextQuestion();
 	    StartCoroutine(DisplayQuestion());
 	}
 
@@ -35,7 +38,7 @@ public class GameState : MonoBehaviour
         return instance;
     }
 
-    private IEnumerator DisplayQuestion()
+    private void PrepareNextQuestion()
     {
         question.text = null;
         reaction.text = null;
@@ -43,16 +46,24 @@ public class GameState : MonoBehaviour
         {
             debugButtons[i].GetComponentInChildren<Text>().text = currentQuestion.responses[i].text;
         }
+    }
+
+    private IEnumerator DisplayQuestion()
+    {
         foreach (var c in currentQuestion.question)
         {
             question.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
+        lastRandomReactionIndex = -1;
+        enableRandomReaction = currentQuestion.randomReactions.Length != 0;
+        ResetRandomReactionTimer();
         //spawn game, fade ?
     }
 
     public void Answer(string anwser)
     {
+        StopAllCoroutines();
         reaction.text = null;
         currentResponse = currentQuestion.responses.First(r => string.Equals(r.text, anwser));
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
@@ -62,13 +73,15 @@ public class GameState : MonoBehaviour
     void OnDisplayReaction()
     {
         StopAllCoroutines();
+        ResetRandomReactionTimer();
+        enableRandomReaction = false;
         StartCoroutine(DisplayReaction());
     }
 
     private IEnumerator DisplayReaction()
     {
         var reactionText = string.IsNullOrEmpty(currentResponse.reaction)
-            ? currentQuestion.globalReactions[Random.Range(0, currentQuestion.globalReactions.Length)]
+            ? currentQuestion.globalReaction
             : currentResponse.reaction;
         foreach (var c in reactionText)
         {
@@ -85,8 +98,8 @@ public class GameState : MonoBehaviour
         {
             yield return StartCoroutine(FadeReaction());
             animator.SetTrigger("SuccessEnd");
-            question.text = null;
             currentQuestion = nextQuestion;
+            PrepareNextQuestion();
             //destroy game
         }
     }
@@ -111,5 +124,41 @@ public class GameState : MonoBehaviour
         color.a = 1f;
         reaction.color = color;
         reaction.text = null;
+    }
+
+    void Update()
+    {
+        if (!enableRandomReaction)
+            return;
+
+        randomReactionTimer -= Time.deltaTime;
+        if (randomReactionTimer < 0f)
+        {
+            ResetRandomReactionTimer();
+            StartCoroutine(DisplayRandomReaction());
+        }
+    }
+
+    private void ResetRandomReactionTimer()
+    {
+        randomReactionTimer = Random.Range(currentQuestion.minRandomDuration, currentQuestion.maxRandomDuration);
+    }
+
+    private IEnumerator DisplayRandomReaction()
+    {
+        int newRandomReactionIndex;
+        do
+        {
+            newRandomReactionIndex = Random.Range(0, currentQuestion.randomReactions.Length);
+        } 
+        while (newRandomReactionIndex == lastRandomReactionIndex);
+        lastRandomReactionIndex = newRandomReactionIndex;
+        var reactionText = currentQuestion.randomReactions[newRandomReactionIndex];
+        foreach (var c in reactionText)
+        {
+            reaction.text += c;
+            yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
+        }
+        StartCoroutine(FadeReaction());
     }
 }
