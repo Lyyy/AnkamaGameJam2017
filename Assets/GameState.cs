@@ -158,13 +158,13 @@ public class GameState : MonoBehaviour
     {
         var reactionText = currentQuestion.waitingReactions[lastWaitingReactionIndex];
         lastWaitingReactionIndex++;
-        if (currentQuestion.waitingReactions.Length == lastWaitingReactionIndex)
-            enableWaitingReaction = false;
+        enableWaitingReaction = false;
         foreach (var c in reactionText)
         {
             reaction.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
+        enableWaitingReaction = lastWaitingReactionIndex != currentQuestion.waitingReactions.Length;
         StartCoroutine(FadeReaction());
     }
 }
