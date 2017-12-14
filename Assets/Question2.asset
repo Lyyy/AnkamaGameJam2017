@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question2
+  m_EditorClassIdentifier: 
+  question: "\xCAtes-vous heureux de ne plus \xEAtre seul ?"
+  responses:
+  - text: Oui
+    reaction: Je ne vous jugerai pas.
+    nextQuestion: {fileID: 0}
+  - text: Non
+    reaction: "Qu'importe votre r\xE9ponse, je resterai l\xE0 pour vous."
+    nextQuestion: {fileID: 0}
+  - text: Je ne sais pas encore
+    reaction: "Je crois que je dois r\xE9pondre \"Tant mieux\".\nJe n'ai personnellement
+      pas d'avis particulier sur la question.\nVotre pr\xE9sence m'est indiff\xE9rente."
+    nextQuestion: {fileID: 0}
