@@ -141,6 +141,7 @@ public class GameState : MonoBehaviour
         var color = text.color;
         color.a = 1f;
         text.color = color;
+        text.text = "";
         foreach (var c in value)
         {
             if (c == '_')
