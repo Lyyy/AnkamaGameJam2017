@@ -8,7 +8,10 @@ public class GameState : MonoBehaviour
     public Text question;
     public Text reaction;
     public Question startQuestion;
-    
+
+    public GameObject debugPanel;
+    public Button[] debugButtons;
+
     private Animator animator;
 
     private Question currentQuestion;
@@ -21,6 +24,9 @@ public class GameState : MonoBehaviour
 	    instance = this;
 	    animator = GetComponent<Animator>();
 	    currentQuestion = startQuestion;
+        debugPanel.SetActive(Application.isEditor);
+        foreach (var button in debugButtons)
+            button.onClick.AddListener(() => Answer(button.GetComponentInChildren<Text>().text));
 	    StartCoroutine(DisplayQuestion());
 	}
 
@@ -33,6 +39,10 @@ public class GameState : MonoBehaviour
     {
         question.text = null;
         reaction.text = null;
+        for (var i = 0; i < currentQuestion.responses.Length; i++)
+        {
+            debugButtons[i].GetComponentInChildren<Text>().text = currentQuestion.responses[i].text;
+        }
         foreach (var c in currentQuestion.question)
         {
             question.text += c;
@@ -84,12 +94,17 @@ public class GameState : MonoBehaviour
     private IEnumerator FadeReaction()
     {
         yield return new WaitForSeconds(0.75f);
+        Color color;
         for (var i = 1f; i > 0f; i -= Time.deltaTime)
         {
-            var color = reaction.color;
+            color = reaction.color;
             color.a = i;
             reaction.color = color;
             yield return null;
         }
+        color = reaction.color;
+        color.a = 1f;
+        reaction.color = color;
+        reaction.text = null;
     }
 }
