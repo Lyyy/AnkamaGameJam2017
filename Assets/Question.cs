@@ -10,8 +10,8 @@ public class Question : ScriptableObject
     [Multiline]
     public string globalReaction;
     [Multiline]
-    public string[] randomReactions;
-    public float minRandomDuration;
-    public float maxRandomDuration;
+    public string[] waitingReactions;
+    public float minWaitingDuration;
+    public float maxWaitingDuration;
     public Question globalNextQuestion;
 }

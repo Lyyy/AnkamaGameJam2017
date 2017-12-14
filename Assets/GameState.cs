@@ -15,9 +15,9 @@ public class GameState : MonoBehaviour
     private Animator animator;
     private Question currentQuestion;
     private Response currentResponse;
-    private float randomReactionTimer;
-    private int lastRandomReactionIndex = -1;
-    private bool enableRandomReaction = false;
+    private float waitingReactionTimer;
+    private int lastWaitingReactionIndex = -1;
+    private bool enableWaitingReaction = false;
 
     public static GameState instance;
     
@@ -55,9 +55,9 @@ public class GameState : MonoBehaviour
             question.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
-        lastRandomReactionIndex = -1;
-        enableRandomReaction = currentQuestion.randomReactions.Length != 0;
-        ResetRandomReactionTimer();
+        lastWaitingReactionIndex = 0;
+        enableWaitingReaction = currentQuestion.waitingReactions.Length != 0;
+        ResetWaitingReactionTimer();
         //spawn game, fade ?
     }
 
@@ -73,8 +73,8 @@ public class GameState : MonoBehaviour
     void OnDisplayReaction()
     {
         StopAllCoroutines();
-        ResetRandomReactionTimer();
-        enableRandomReaction = false;
+        ResetWaitingReactionTimer();
+        enableWaitingReaction = false;
         StartCoroutine(DisplayReaction());
     }
 
@@ -128,32 +128,28 @@ public class GameState : MonoBehaviour
 
     void Update()
     {
-        if (!enableRandomReaction)
+        if (!enableWaitingReaction)
             return;
 
-        randomReactionTimer -= Time.deltaTime;
-        if (randomReactionTimer < 0f)
+        waitingReactionTimer -= Time.deltaTime;
+        if (waitingReactionTimer < 0f)
         {
-            ResetRandomReactionTimer();
-            StartCoroutine(DisplayRandomReaction());
+            ResetWaitingReactionTimer();
+            StartCoroutine(DisplayWaitingReaction());
         }
     }
 
-    private void ResetRandomReactionTimer()
+    private void ResetWaitingReactionTimer()
     {
-        randomReactionTimer = Random.Range(currentQuestion.minRandomDuration, currentQuestion.maxRandomDuration);
+        waitingReactionTimer = Random.Range(currentQuestion.minWaitingDuration, currentQuestion.maxWaitingDuration);
     }
 
-    private IEnumerator DisplayRandomReaction()
+    private IEnumerator DisplayWaitingReaction()
     {
-        int newRandomReactionIndex;
-        do
-        {
-            newRandomReactionIndex = Random.Range(0, currentQuestion.randomReactions.Length);
-        } 
-        while (newRandomReactionIndex == lastRandomReactionIndex);
-        lastRandomReactionIndex = newRandomReactionIndex;
-        var reactionText = currentQuestion.randomReactions[newRandomReactionIndex];
+        var reactionText = currentQuestion.waitingReactions[lastWaitingReactionIndex];
+        lastWaitingReactionIndex++;
+        if (currentQuestion.waitingReactions.Length == lastWaitingReactionIndex)
+            enableWaitingReaction = false;
         foreach (var c in reactionText)
         {
             reaction.text += c;
