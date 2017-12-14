@@ -57,8 +57,14 @@ public class GameState : MonoBehaviour
         yield return DisplayText(question, currentQuestion.question, false, false);
         lastWaitingReactionIndex = 0;
         ResetWaitingReactionTimer();
+        if (!canAnswer)
+            StartCoroutine(SpawnGame());
+    }
+
+    private IEnumerator SpawnGame()
+    {
         canAnswer = true;
-        //spawn game, fade ?
+        yield break;
     }
 
     public void Answer(string anwser)
@@ -164,6 +170,8 @@ public class GameState : MonoBehaviour
                 yield return new WaitForSeconds(t[j-1] == '.' ? 0.5f : 0.04f);
                 if (j < t.Length && t[j] == '#')
                 {
+                    if (!canAnswer && text == question)
+                        StartCoroutine(SpawnGame());
                     yield return new WaitForSeconds(3f);
                     t = t.Remove(j, 1);
                 }
