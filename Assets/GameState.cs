@@ -55,7 +55,6 @@ public class GameState : MonoBehaviour
     {
         yield return DisplayText(question, currentQuestion.question, false, false);
         lastWaitingReactionIndex = 0;
-        enableWaitingReaction = currentQuestion.waitingReactions.Length != 0;
         ResetWaitingReactionTimer();
         //spawn game, fade ?
     }
@@ -97,6 +96,7 @@ public class GameState : MonoBehaviour
         }
         else
         {
+            ResetWaitingReactionTimer();
             //restart game
         }
     }
@@ -123,6 +123,7 @@ public class GameState : MonoBehaviour
 
     private void ResetWaitingReactionTimer()
     {
+        enableWaitingReaction = lastWaitingReactionIndex != currentQuestion.waitingReactions.Length;
         waitingReactionTimer = Random.Range(currentQuestion.minWaitingDuration, currentQuestion.maxWaitingDuration);
     }
 
@@ -149,7 +150,7 @@ public class GameState : MonoBehaviour
                 continue;
             }
             text.text += c;
-            yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
+            yield return new WaitForSeconds(c == '.' ? 0.5f : 0.04f);
         }
         if (fade)
         {
