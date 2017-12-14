@@ -155,12 +155,18 @@ public class GameState : MonoBehaviour
             var t = values[i];
             var whiteValue = "";
             foreach (var c in t)
-                whiteValue += c == ' ' ? ' ' : c == '\n' ? '\n' : '\u00A0';
+                if(c != '#')
+                    whiteValue += c == ' ' ? ' ' : c == '\n' ? '\n' : '\u00A0';
 
             for (var j = 1; j <= t.Length; j++)
             {
                 text.text = t.Substring(0, j) + whiteValue.Substring(j, whiteValue.Length - j);
                 yield return new WaitForSeconds(t[j-1] == '.' ? 0.5f : 0.04f);
+                if (j < t.Length && t[j] == '#')
+                {
+                    yield return new WaitForSeconds(3f);
+                    t = t.Remove(j, 1);
+                }
             }
             if (i < values.Length - 1)
             {
