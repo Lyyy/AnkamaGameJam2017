@@ -162,12 +162,12 @@ public class GameState : MonoBehaviour
 
     private IEnumerator FadeReaction()
     {
-        yield return new WaitForSeconds(Mathf.Max(0.75f, reaction.text.Length * 0.1f));
+        yield return new WaitForSeconds(Mathf.Clamp(reaction.text.Length * 0.03f, 0.75f, 3f));
         Color color;
-        for (var i = 1f; i > 0f; i -= Time.deltaTime)
+        for (var i = 0.25f; i > 0f; i -= Time.deltaTime)
         {
             color = reaction.color;
-            color.a = i;
+            color.a = i * 0.25f;
             reaction.color = color;
             yield return null;
         }
