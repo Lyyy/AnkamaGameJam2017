@@ -141,17 +141,27 @@ public class GameState : MonoBehaviour
         color.a = 1f;
         text.color = color;
         text.text = "";
-        foreach (var c in value)
+        string[] values = value.Split('_');
+
+        for (int i = 0; i < values.Length; i++)
         {
-            if (c == '_')
+            var t = values[i];
+            var whiteValue = "";
+            foreach (var c in t)
+                whiteValue += c == ' ' ? ' ' : '\u00A0';
+
+            for (var j = 1; j <= t.Length; j++)
             {
-                yield return new WaitForSeconds(1f);
-                text.text = "";
-                continue;
+                text.text = t.Substring(0, j) + whiteValue.Substring(j, whiteValue.Length - j);
+                yield return new WaitForSeconds(t[j-1] == '.' ? 0.5f : 0.04f);
             }
-            text.text += c;
-            yield return new WaitForSeconds(c == '.' ? 0.5f : 0.04f);
+            if (i < values.Length - 1)
+            {
+                yield return new WaitForSeconds(Mathf.Clamp(reaction.text.Length * 0.03f, 0.75f, 3f));
+                text.text = "";
+            }
         }
+        
         if (fade)
         {
             var coroutine = StartCoroutine(FadeReaction());
