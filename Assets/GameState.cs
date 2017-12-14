@@ -115,6 +115,7 @@ public class GameState : MonoBehaviour
         if (waitingReactionTimer < 0f)
         {
             ResetWaitingReactionTimer();
+            StopAllCoroutines();
             StartCoroutine(DisplayWaitingReaction());
         }
     }
@@ -127,7 +128,6 @@ public class GameState : MonoBehaviour
 
     private IEnumerator DisplayWaitingReaction()
     {
-        StopAllCoroutines();
         var reactionText = currentQuestion.waitingReactions[lastWaitingReactionIndex];
         lastWaitingReactionIndex++;
         enableWaitingReaction = false;
