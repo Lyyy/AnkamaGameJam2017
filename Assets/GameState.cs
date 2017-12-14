@@ -55,7 +55,8 @@ public class GameState : MonoBehaviour
     {
         reaction.text = null;
         currentResponse = currentQuestion.responses.First(r => string.Equals(r.text, anwser));
-        animator.SetTrigger(currentResponse.nextQuestion == currentQuestion ? "Fail" : "Success");
+        var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
+        animator.SetTrigger(nextQuestion == currentQuestion ? "Fail" : "Success");
     }
 
     void OnDisplayReaction()
@@ -66,12 +67,16 @@ public class GameState : MonoBehaviour
 
     private IEnumerator DisplayReaction()
     {
-        foreach (var c in currentResponse.reaction)
+        var reactionText = string.IsNullOrEmpty(currentResponse.reaction)
+            ? currentQuestion.globalReactions[Random.Range(0, currentQuestion.globalReactions.Length)]
+            : currentResponse.reaction;
+        foreach (var c in reactionText)
         {
             reaction.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
-        if (currentResponse.nextQuestion == currentQuestion)
+        var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
+        if (nextQuestion == currentQuestion)
         {
             StartCoroutine(FadeReaction());
             //restart game
@@ -81,7 +86,7 @@ public class GameState : MonoBehaviour
             yield return StartCoroutine(FadeReaction());
             animator.SetTrigger("SuccessEnd");
             question.text = null;
-            currentQuestion = currentResponse.nextQuestion;
+            currentQuestion = nextQuestion;
             //destroy game
         }
     }

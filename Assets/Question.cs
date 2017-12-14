@@ -7,4 +7,7 @@ public class Question : ScriptableObject
     public string question;
     public Response[] responses;
     public GameObject game;
+    [Multiline]
+    public string[] globalReactions;
+    public Question globalNextQuestion;
 }
