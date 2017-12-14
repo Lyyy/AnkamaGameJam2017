@@ -177,7 +177,7 @@ public class GameState : MonoBehaviour
         for (var i = 0.25f; i > 0f; i -= Time.deltaTime)
         {
             color = reaction.color;
-            color.a = i * 0.25f;
+            color.a = i * 4f;
             reaction.color = color;
             yield return null;
         }
