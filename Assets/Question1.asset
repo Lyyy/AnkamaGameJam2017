@@ -15,14 +15,18 @@ MonoBehaviour:
     trouv\xE9 mon oreillette bluetooth.\nA qui dois-je m'adresser ?"
   responses:
   - text: Alfred
-    reaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
-      de l'appareil avec lequel vous entrez en contact.\n"
-    nextQuestion: {fileID: 11400000, guid: ab609f7e5ca426a40903faddb1cb6a4a, type: 2}
+    reaction: 
+    nextQuestion: {fileID: 0}
   - text: "Azal\xE9e"
-    reaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
-      de l'appareil avec lequel vous entrez en contact."
-    nextQuestion: {fileID: 11400000, guid: ab609f7e5ca426a40903faddb1cb6a4a, type: 2}
+    reaction: 
+    nextQuestion: {fileID: 0}
   - text: Arnaud
-    reaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
-      de l'appareil avec lequel vous entrez en contact."
-    nextQuestion: {fileID: 11400000, guid: ab609f7e5ca426a40903faddb1cb6a4a, type: 2}
+    reaction: 
+    nextQuestion: {fileID: 0}
+  game: {fileID: 0}
+  globalReaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
+    de l'appareil avec lequel vous entrez en contact."
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalNextQuestion: {fileID: 11400000, guid: ab609f7e5ca426a40903faddb1cb6a4a, type: 2}

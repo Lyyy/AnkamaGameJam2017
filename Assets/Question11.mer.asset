@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question11.mer
+  m_EditorClassIdentifier: 
+  question: "Puisque vous \xEAtes l\xE0 \xE0 ne rien faire sur votre serviette, je
+    vais stimuler votre lobe temporal. Qu'est-ce qui jaune et qui attend ?"
+  responses:
+  - text: Jonathan
+    reaction: Je ne vois pas ce que M. Rhys Meyer vient faire dans l'histoire.
+    nextQuestion: {fileID: 0}
+  - text: Un poussin
+    reaction: "Vous avez d\xE9j\xE0 vu un poussin qui attend sagement ? Moi non."
+    nextQuestion: {fileID: 0}
+  - text: Un canari
+    reaction: J'aime quand ils ont un drap au-dessus de leur cage. Ils sont moins
+      bruyants.
+    nextQuestion: {fileID: 0}
+  game: {fileID: 0}
+  globalReaction: "Je ne trouve rien dans mes archives qui fasse votre poids et qui
+    soit dou\xE9 de parole. Vous \xEAtes peut-\xEAtre une esp\xE8ce \xE0 d\xE9couvrir."
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalNextQuestion: {fileID: 0}

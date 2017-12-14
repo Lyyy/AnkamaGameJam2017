@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question5
+  m_EditorClassIdentifier: 
+  question: "Je pense qu'un aliment \xE0 base de beurre, de barre de chocolat, d'eau,
+    de farine T45 et T55, de levure, de sel et de sucre vous ferait du bien. Je ne
+    me souviens plus du nom commun.\n\nAuriez-vous une id\xE9e ?"
+  responses:
+  - text: Un pain au chocolat ?
+    reaction: "Oh, vous \xEAtes donc comme 70% de la population, int\xE9ressant."
+    nextQuestion: {fileID: 11400000, guid: 995beff85093f4c4aaa7d6f5d4d59f83, type: 2}
+  - text: Une chocolatine ?
+    reaction: "Oh, vous \xEAtes donc comme 30% de la population, int\xE9ressant."
+    nextQuestion: {fileID: 11400000, guid: d01d9a1c7e1955641b6e40ff57e3f0bc, type: 2}
+  game: {fileID: 0}
+  globalReaction: 
+  waitingReactions:
+  - Je crois qu'il y a un "B"
+  - "Ou peut-\xEAtre \xE9tait-ce un X ?"
+  - "Saviez-vous que le X est une lettre sym\xE9trique ?"
+  minWaitingDuration: 2
+  maxWaitingDuration: 2
+  globalNextQuestion: {fileID: 0}

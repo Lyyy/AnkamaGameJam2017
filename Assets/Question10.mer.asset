@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question10.mer
+  m_EditorClassIdentifier: 
+  question: "Ne me laissez pas m'\xE9teindre de cette fa\xE7on voyons. Vous vous pr\xE9lassez
+    pendant que ma batterie se vide. Vous ne pouvez rien faire ?"
+  responses:
+  - text: Non
+    reaction: 
+    nextQuestion: {fileID: 11400000, guid: 25243a1b5edf8df4f908cc3df3e244af, type: 2}
+  - text: Coupez notre communication.
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  - text: "J'aime vous voir vous \xE9teindre."
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  game: {fileID: 0}
+  globalReaction: 
+  waitingReactions:
+  - "Allons, je sais que vous ne voulez pas r\xE9pondre cela."
+  - "Vraiment ? R\xE9fl\xE9chissez."
+  - L'intelligence n'est pas votre principal atout.
+  minWaitingDuration: 3
+  maxWaitingDuration: 6
+  globalNextQuestion: {fileID: 0}
