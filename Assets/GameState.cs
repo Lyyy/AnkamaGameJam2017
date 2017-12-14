@@ -45,21 +45,15 @@ public class GameState : MonoBehaviour
         for (var i = 0; i < currentQuestion.responses.Length; i++)
         {
             debugButtons[i].GetComponentInChildren<Text>().text = currentQuestion.responses[i].text;
+            debugButtons[i].gameObject.SetActive(true);
         }
+        for (var i = currentQuestion.responses.Length; i < debugButtons.Length; i++)
+            debugButtons[i].gameObject.SetActive(false);
     }
 
     private IEnumerator DisplayQuestion()
     {
-        foreach (var c in currentQuestion.question)
-        {
-            if (c == '_')
-            {
-                yield return new WaitForSeconds(1f);
-                continue;
-            }
-            question.text += c;
-            yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
-        }
+        yield return DisplayText(question, currentQuestion.question, false, false);
         lastWaitingReactionIndex = 0;
         enableWaitingReaction = currentQuestion.waitingReactions.Length != 0;
         ResetWaitingReactionTimer();
@@ -88,29 +82,22 @@ public class GameState : MonoBehaviour
         var reactionText = string.IsNullOrEmpty(currentResponse.reaction)
             ? currentQuestion.globalReaction
             : currentResponse.reaction;
-        foreach (var c in reactionText)
-        {
-            if (c == '_')
-            {
-                yield return new WaitForSeconds(1f);
-                continue;
-            }
-            reaction.text += c;
-            yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
-        }
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
-        if (nextQuestion == currentQuestion)
-        {
-            StartCoroutine(FadeReaction());
-            //restart game
-        }
-        else
+        var success = nextQuestion != currentQuestion;
+        yield return DisplayText(reaction, reactionText, true, success);
+
+        if (success)
         {
             yield return StartCoroutine(FadeReaction());
             animator.SetTrigger("SuccessEnd");
             currentQuestion = nextQuestion;
             PrepareNextQuestion();
             //destroy game
+            
+        }
+        else
+        {
+            //restart game
         }
     }
 
@@ -119,22 +106,7 @@ public class GameState : MonoBehaviour
         StartCoroutine(DisplayQuestion());
     }
 
-    private IEnumerator FadeReaction()
-    {
-        yield return new WaitForSeconds(0.75f);
-        Color color;
-        for (var i = 1f; i > 0f; i -= Time.deltaTime)
-        {
-            color = reaction.color;
-            color.a = i;
-            reaction.color = color;
-            yield return null;
-        }
-        color = reaction.color;
-        color.a = 1f;
-        reaction.color = color;
-        reaction.text = null;
-    }
+    
 
     void Update()
     {
@@ -159,12 +131,48 @@ public class GameState : MonoBehaviour
         var reactionText = currentQuestion.waitingReactions[lastWaitingReactionIndex];
         lastWaitingReactionIndex++;
         enableWaitingReaction = false;
-        foreach (var c in reactionText)
+        yield return DisplayText(reaction, reactionText, true, false);
+        enableWaitingReaction = lastWaitingReactionIndex != currentQuestion.waitingReactions.Length;
+    }
+
+    private IEnumerator DisplayText(Text text, string value, bool fade, bool waitForFade)
+    {
+        var color = text.color;
+        color.a = 1f;
+        text.color = color;
+        foreach (var c in value)
         {
-            reaction.text += c;
+            if (c == '_')
+            {
+                yield return new WaitForSeconds(1f);
+                text.text = "";
+                continue;
+            }
+            text.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
-        enableWaitingReaction = lastWaitingReactionIndex != currentQuestion.waitingReactions.Length;
-        StartCoroutine(FadeReaction());
+        if (fade)
+        {
+            var coroutine = StartCoroutine(FadeReaction());
+            if (waitForFade)
+                yield return coroutine;    
+        }
+    }
+
+    private IEnumerator FadeReaction()
+    {
+        yield return new WaitForSeconds(Mathf.Max(0.75f, reaction.text.Length * 0.1f));
+        Color color;
+        for (var i = 1f; i > 0f; i -= Time.deltaTime)
+        {
+            color = reaction.color;
+            color.a = i;
+            reaction.color = color;
+            yield return null;
+        }
+        color = reaction.color;
+        color.a = 1f;
+        reaction.color = color;
+        reaction.text = null;
     }
 }
