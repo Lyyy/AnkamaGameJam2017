@@ -106,8 +106,6 @@ public class GameState : MonoBehaviour
         StartCoroutine(DisplayQuestion());
     }
 
-    
-
     void Update()
     {
         if (!enableWaitingReaction)
@@ -129,6 +127,7 @@ public class GameState : MonoBehaviour
 
     private IEnumerator DisplayWaitingReaction()
     {
+        StopAllCoroutines();
         var reactionText = currentQuestion.waitingReactions[lastWaitingReactionIndex];
         lastWaitingReactionIndex++;
         enableWaitingReaction = false;
