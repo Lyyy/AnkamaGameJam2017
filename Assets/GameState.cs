@@ -148,7 +148,7 @@ public class GameState : MonoBehaviour
             var t = values[i];
             var whiteValue = "";
             foreach (var c in t)
-                whiteValue += c == ' ' ? ' ' : '\u00A0';
+                whiteValue += c == ' ' ? ' ' : c == '\n' ? '\n' : '\u00A0';
 
             for (var j = 1; j <= t.Length; j++)
             {
