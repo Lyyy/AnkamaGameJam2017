@@ -52,6 +52,11 @@ public class GameState : MonoBehaviour
     {
         foreach (var c in currentQuestion.question)
         {
+            if (c == '_')
+            {
+                yield return new WaitForSeconds(1f);
+                continue;
+            }
             question.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
@@ -85,6 +90,11 @@ public class GameState : MonoBehaviour
             : currentResponse.reaction;
         foreach (var c in reactionText)
         {
+            if (c == '_')
+            {
+                yield return new WaitForSeconds(1f);
+                continue;
+            }
             reaction.text += c;
             yield return new WaitForSeconds(c == '.' ? 0.75f : 0.04f);
         }
