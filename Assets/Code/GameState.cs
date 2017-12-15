@@ -9,6 +9,7 @@ public class GameState : MonoBehaviour
     public Text question;
     public Text reaction;
     public Question startQuestion;
+    public bool debug = false;
 
     public GameObject debugPanel;
     public Button[] debugButtons;
@@ -168,6 +169,7 @@ public class GameState : MonoBehaviour
         text.color = color;
         text.text = "";
         string[] values = value.Split('_');
+        var multiplier = Application.isEditor && debug ? 1000 : 1;
 
         for (int i = 0; i < values.Length; i++)
         {
@@ -180,18 +182,18 @@ public class GameState : MonoBehaviour
             for (var j = 1; j <= t.Length; j++)
             {
                 text.text = t.Substring(0, j) + whiteValue.Substring(j, whiteValue.Length - j);
-                yield return new WaitForSeconds(t[j-1] == '.' ? 0.5f : 0.04f);
+                yield return new WaitForSeconds((t[j - 1] == '.' ? 0.5f : 0.04f) / multiplier);
                 if (j < t.Length && t[j] == '#')
                 {
                     if (!canAnswer && text == question)
                         StartCoroutine(SpawnGame());
-                    yield return new WaitForSeconds(3f);
+                    yield return new WaitForSeconds(3f / multiplier);
                     t = t.Remove(j, 1);
                 }
             }
             if (i < values.Length - 1)
             {
-                yield return new WaitForSeconds(Mathf.Clamp(reaction.text.Length * 0.03f, 0.75f, 3f));
+                yield return new WaitForSeconds(Mathf.Clamp(reaction.text.Length * 0.03f, 0.75f, 3f) / multiplier);
                 text.text = "";
             }
         }
