@@ -64,6 +64,7 @@ public class GameState : MonoBehaviour
     private IEnumerator SpawnGame()
     {
         canAnswer = true;
+        animator.SetTrigger("DisplayGame");
         yield break;
     }
 
