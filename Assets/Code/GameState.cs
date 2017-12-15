@@ -68,13 +68,10 @@ public class GameState : MonoBehaviour
     private IEnumerator SpawnGame()
     {
         canAnswer = true;
-        var scene = SceneManager.GetSceneByName(currentQuestion.gameScene);
-        if(!scene.IsValid())
-            Debug.LogError("No scene associated with question");
-        else
+        if (!string.IsNullOrEmpty(currentQuestion.gameScene))
         {
             yield return SceneManager.LoadSceneAsync(currentQuestion.gameScene);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentQuestion.gameScene));    
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentQuestion.gameScene));        
         }
         animator.SetTrigger("DisplayGame");
     }
