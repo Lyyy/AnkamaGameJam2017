@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Oops, je crois que je vais bient\xF4t m'\xE9teindre. Vous voulez bien
     m'emmener en vacances avant qu'il ne soit trop tard ?"
+  gameScene: Question7
   responses:
   - text: "Allons \xE0 la montagne !"
     reaction: "Bon, voyez le bon c\xF4t\xE9 des choses. Il est toujours plus facile
@@ -25,11 +26,10 @@ MonoBehaviour:
       peau fragile aux rayons UV toute la journ\xE9e.\r\n\r\nCeci \xE9tant dit, je
       ne suis pas s\xFBr que cela m'aide \xE0 retrouver un soup\xE7on d'\xE9nergie."
     nextQuestion: {fileID: 11400000, guid: 8a41504efd2b6a64fb8a1bfc99111bf0, type: 2}
-  game: {fileID: 0}
-  globalReaction: 
   waitingReactions:
   - "Devrais-je pr\xE9ciser la saison ?"
   - "Oui peut-\xEAtre."
   minWaitingDuration: 2
   maxWaitingDuration: 4
+  globalReaction: 
   globalNextQuestion: {fileID: 0}
