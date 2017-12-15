@@ -67,8 +67,14 @@ public class GameState : MonoBehaviour
     private IEnumerator SpawnGame()
     {
         canAnswer = true;
-        yield return SceneManager.LoadSceneAsync(currentQuestion.gameScene);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentQuestion.gameScene));
+        var scene = SceneManager.GetSceneByName(currentQuestion.gameScene);
+        if(!scene.IsValid())
+            Debug.LogError("No scene associated with question");
+        else
+        {
+            yield return SceneManager.LoadSceneAsync(currentQuestion.gameScene);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentQuestion.gameScene));    
+        }
         animator.SetTrigger("DisplayGame");
     }
 
@@ -100,7 +106,7 @@ public class GameState : MonoBehaviour
             : currentResponse.reaction;
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
         var success = nextQuestion != currentQuestion;
-        if(success)
+        if (success && Game.GetInstance() != null)
             Game.GetInstance().Delete();
         yield return DisplayText(reaction, reactionText, true, success);
 
@@ -114,7 +120,8 @@ public class GameState : MonoBehaviour
         else
         {
             ResetWaitingReactionTimer();
-            yield return Game.GetInstance().Reload();
+            if (Game.GetInstance() != null)
+                yield return Game.GetInstance().Reload();
             canAnswer = true;
         }
     }
