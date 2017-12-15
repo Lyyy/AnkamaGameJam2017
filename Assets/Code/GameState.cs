@@ -76,10 +76,10 @@ public class GameState : MonoBehaviour
         animator.SetTrigger("DisplayGame");
     }
 
-    public void Answer(string anwser)
+    public bool Answer(string anwser)
     {
         if (!canAnswer)
-            return;
+            return false;
 
         canAnswer = false;
         enableWaitingReaction = false;
@@ -88,6 +88,7 @@ public class GameState : MonoBehaviour
         currentResponse = currentQuestion.responses.First(r => string.Equals(r.text, anwser));
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
         animator.SetTrigger(nextQuestion == currentQuestion ? "Fail" : "Success");
+        return true;
     }
 
     void OnDisplayReaction()

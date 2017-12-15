@@ -21,7 +21,7 @@ public class PopupBlock : MonoBehaviour
             spriteRenderer.color *= 0.5f; 
             var text = GetComponentInChildren<Text>().text;
             if (string.Equals(validResponse, text))
-                GameState.GetInstance().Answer(text);
+                Game.GetInstance().Answer(text);
             else
             {
                 popup.gameObject.SetActive(false);

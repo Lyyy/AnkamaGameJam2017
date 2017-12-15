@@ -23,12 +23,17 @@ public class Game : MonoBehaviour
         instance = this;
     }
 
-    public IEnumerator Reload()
+    public virtual IEnumerator Reload()
     {
         yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 
-    public void Delete()
+    public virtual bool Answer(string answer)
+    {
+        return GameState.GetInstance().Answer(answer);
+    }
+
+    public virtual void Delete()
     {
         Destroy(gameObject);
     }

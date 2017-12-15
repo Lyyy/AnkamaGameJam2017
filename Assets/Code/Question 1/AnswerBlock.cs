@@ -9,7 +9,7 @@ public class AnswerBlock : MonoBehaviour
     {
         if (string.Equals(col.gameObject.name, "Player"))
         {
-            GameState.GetInstance().Answer(GetComponentInChildren<Text>().text);
+            Game.GetInstance().Answer(GetComponentInChildren<Text>().text);
             spriteRenderer.color *= 0.5f;
         }
     }
