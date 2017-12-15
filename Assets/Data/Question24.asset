@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Question24
   m_EditorClassIdentifier: 
   question: "Oh mais j'y pense, voil\xE0 une information manquante tr\xE8s importante
-    pour \xE9tablir votre profil biologique. Quelle est la distance d'une extr\xE9mit\xE9
+    pour \xE9tablir votre profil biologique. Quelle est la distance d'une de vos extr\xE9mit\xE9s
     \xE0 l'autre, dans la verticalit\xE9 ?"
   gameScene: 
   responses:
@@ -31,7 +31,7 @@ MonoBehaviour:
   - "Ni de poids ceci \xE9tant dit."
   minWaitingDuration: 2
   maxWaitingDuration: 5
-  globalReaction: "Vos efforts pour prouver votre taille sous \xE9patants. J'ai souvent
+  globalReaction: "Vos efforts pour prouver votre taille sont \xE9patants. J'ai souvent
     lu des phrases comme \"ce n'est pas la taille qui compte\". Je vous note donc
     un trait de susceptiblit\xE9 potentielle. Ne vous froissez pas bien s\xFBr."
-  globalNextQuestion: {fileID: 0}
+  globalNextQuestion: {fileID: 11400000, guid: edca5bef5520d1e4989f8c29debb5fd6, type: 2}

@@ -28,4 +28,4 @@ MonoBehaviour:
   globalReaction: "Je ne peux accepter ces pratiques non scientifiques dans mon syst\xE8me.
     Le risque d'incoh\xE9rences deviendrait alors beaucoup trop important. Mieux vaut
     se contenter de choses claires et prouv\xE9es."
-  globalNextQuestion: {fileID: 0}
+  globalNextQuestion: {fileID: 11400000, guid: 3d5a44b40b0f4e9418f70bfda0fe2e52, type: 2}

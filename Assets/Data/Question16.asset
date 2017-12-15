@@ -27,4 +27,4 @@ MonoBehaviour:
   minWaitingDuration: 0
   maxWaitingDuration: 0
   globalReaction: '...'
-  globalNextQuestion: {fileID: 0}
+  globalNextQuestion: {fileID: 11400000, guid: d3a5ab2b2a0c0d64b9a10d99bce82191, type: 2}

@@ -29,5 +29,5 @@ MonoBehaviour:
   globalReaction: "Je vous remercie de votre confiance. J'ai pu calibrer mes donn\xE9es
     sur les votres pour r\xE9pondre au mieux \xE0 vos attentes.\n\nLaissez-moi vous
     afficher d\xE8s \xE0 pr\xE9sent la page qui appara\xEEtra dans l'encyclop\xE9die
-    la plus consult\xE9e du monde : Wikibulon.\n\nFIN - AFFICHAGE DE PAGE"
+    la plus consult\xE9e du monde : Wikibulon.\n\nFIN - AFFICHAGE DE PAGE###"
   globalNextQuestion: {fileID: 0}

@@ -28,4 +28,4 @@ MonoBehaviour:
   maxWaitingDuration: 0
   globalReaction: "Je vous remercie de cet effort.\n\nVous pouvez maintenant retrouver
     votre chemin. Retournons donc \xE0 la <plage|montagne>."
-  globalNextQuestion: {fileID: 0}
+  globalNextQuestion: {fileID: 11400000, guid: be633a22ceb376d42996bbd0e6140f40, type: 2}

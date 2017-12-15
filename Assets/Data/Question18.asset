@@ -36,4 +36,4 @@ MonoBehaviour:
   maxWaitingDuration: 0
   globalReaction: "La nuit vient de tomber. Je vous propose de ne pas trop tra\xEEner
     dans le coin. Apr\xE8s tout, qui sait ce qui nous attend dans les bois."
-  globalNextQuestion: {fileID: 0}
+  globalNextQuestion: {fileID: 11400000, guid: 710ba9e816460d94aaa479053d184e43, type: 2}
