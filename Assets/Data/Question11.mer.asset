@@ -13,21 +13,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Puisque vous \xEAtes l\xE0 \xE0 ne rien faire sur votre serviette, je
     vais stimuler votre lobe temporal. Qu'est-ce qui jaune et qui attend ?"
+  gameScene: 
   responses:
   - text: Jonathan
     reaction: Je ne vois pas ce que M. Rhys Meyer vient faire dans l'histoire.
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000}
   - text: Un poussin
     reaction: "Vous avez d\xE9j\xE0 vu un poussin qui attend sagement ? Moi non."
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000}
   - text: Un canari
     reaction: J'aime quand ils ont un drap au-dessus de leur cage. Ils sont moins
       bruyants.
     nextQuestion: {fileID: 0}
-  game: {fileID: 0}
-  globalReaction: "Je ne trouve rien dans mes archives qui fasse votre poids et qui
-    soit dou\xE9 de parole. Vous \xEAtes peut-\xEAtre une esp\xE8ce \xE0 d\xE9couvrir."
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
-  globalNextQuestion: {fileID: 0}
+  globalReaction: "Je ne trouve rien dans mes archives qui fasse votre poids et qui
+    soit dou\xE9 de parole. Vous \xEAtes peut-\xEAtre une esp\xE8ce \xE0 d\xE9couvrir."
+  globalNextQuestion: {fileID: 11400000, guid: 4a35f9654e94b2542be47ac5d8677cfa, type: 2}

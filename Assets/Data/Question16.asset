@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question16
+  m_EditorClassIdentifier: 
+  question: '...'
+  gameScene: 
+  responses:
+  - text: 12:21
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  - text: 13:37
+    reaction: 
+    nextQuestion: {fileID: 0}
+  - text: 10:10
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: '...'
+  globalNextQuestion: {fileID: 0}

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question22
+  m_EditorClassIdentifier: 
+  question: Vos pulsations cardiaques se font plus intenses. Tout va bien ?
+  gameScene: 
+  responses:
+  - text: "Oui bien s\xFBr ! "
+    reaction: Parlez-moi.
+    nextQuestion: {fileID: 11400000}
+  - text: Non.
+    reaction: "Je vous \xE9coute, comme toujours."
+    nextQuestion: {fileID: 11400000}
+  - text: J'ai peur du noir.
+    reaction: "Oh, je n'avais pas connaissance de ce fait. Vous \xEAtes plut\xF4t
+      une esp\xE8ce diurne. Je vous propose de revenir devant la boulangerie, je crois
+      savoir qu'il reste quelques lumi\xE8res en activit\xE9."
+    nextQuestion: {fileID: 11400000, guid: b1f175fb6873f8f4e99154c7701b8905, type: 2}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: 
+  globalNextQuestion: {fileID: 0}

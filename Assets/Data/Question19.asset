@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question19
+  m_EditorClassIdentifier: 
+  question: Voulez-vous bien allumer un peu s'il vous plait ?
+  gameScene: 
+  responses:
+  - text: Je n'ai pas de lampe.
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  - text: Je ne sais pas comment.
+    reaction: 
+    nextQuestion: {fileID: 0}
+  - text: Non.
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: "Je vous remercie de cet effort.\n\nVous pouvez maintenant retrouver
+    votre chemin. Retournons donc \xE0 la <plage|montagne>."
+  globalNextQuestion: {fileID: 0}

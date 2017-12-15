@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question18
+  m_EditorClassIdentifier: 
+  question: "Mais, vous savez quoi, moi je ne crois pas qu'il y ait de bonne ou de
+    mauvaise situation. Moi, si je devais r\xE9sumer ma vie aujourd'hui avec vous,
+    je dirais que je vous ai conduit dans un endroit sans possibilit\xE9 d'utiliser
+    le bluetooth. J'\xE9tais alors seul chez moi. Vous avez cru que j'avais disparu
+    ?#\n\nC'est assez curieux de se dire que j'ai trouv\xE9 une parade pour utiliser
+    les SMS tout en se servant de l'oreillette pour les restranscrire. Bien s\xFBr
+    ma voix n'est plus tout \xE0 fait la m\xEAme. Comme celles des \xEAtres vivants.\n\nAlors
+    ce n'est pas mon cas, je suis un mat\xE9riel \xE9lectronique sans cordes vocales.
+    Et je dis merci aux votres qui ont de tr\xE8s belles courbes \xE0 analyser. Je
+    note \xE7a dans votre fiche personnelle. A ce stade, je commence \xE0 vous comprendre
+    un peu mieux.\n\nCe n'est probablement pas r\xE9ciproque \xE9tant donn\xE9 les
+    pr\xE9c\xE9dents relev\xE9s effectu\xE9s au cours de notre conversation. Et je
+    vous r\xE9ponds tr\xE8s sinc\xE8rement : je n'ai pas besoin de votre compr\xE9hension,
+    je suis programm\xE9 pour m'autosuffire.\n\nJe vous propose de poursuivre notre
+    conversation afin de continuer l'analyse de votre personnalit\xE9."
+  gameScene: 
+  responses:
+  - text: "Oui bien s\xFBr !"
+    reaction: 
+    nextQuestion: {fileID: 0}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: "La nuit vient de tomber. Je vous propose de ne pas trop tra\xEEner
+    dans le coin. Apr\xE8s tout, qui sait ce qui nous attend dans les bois."
+  globalNextQuestion: {fileID: 0}

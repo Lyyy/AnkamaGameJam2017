@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question27
+  m_EditorClassIdentifier: 
+  question: "Ne pensez pas \xE0 un \xE9l\xE9phant rose. Ne pensez pas \xE0 un \xE9l\xE9phant
+    rose. Ne pensez pas \xE0 un \xE9l\xE9phant rose. De quelle couleur est le faon
+    ?"
+  gameScene: 
+  responses:
+  - text: Rose
+    reaction: Avez-vous bien lu la question ?
+    nextQuestion: {fileID: 11400000}
+  - text: Bleu
+    reaction: "J'ai connu un \xE9cran bleu une fois, il \xE9tait d\xE9test\xE9 de
+      tous."
+    nextQuestion: {fileID: 11400000}
+  - text: Marron
+    reaction: "Vous ne perdez pas votre lucidit\xE9 en tout temps. Vu les inconv\xE9nients
+      que j'ai d\xE9j\xE0 not\xE9 au sujet de votre esp\xE8ce, cela ne fait pas de
+      mal. Notons \xE7a \xE0 votre sujet.\n\nSachant tout de m\xEAme que le faon est
+      un marron qui tire sur le canelle."
+    nextQuestion: {fileID: 11400000, guid: 031605f19af40aa46b4b218e49c9aa94, type: 2}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: 
+  globalNextQuestion: {fileID: 0}

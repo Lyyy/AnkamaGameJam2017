@@ -14,21 +14,21 @@ MonoBehaviour:
   question: "Toute cette neige l\xE8ve des alertes de s\xE9curit\xE9 sur mon syst\xE8me.
     Cela repr\xE9sente beaucoup trop d'eau au m\xEAme endroit. D'ailleurs, avez-vous
     un poids ?"
+  gameScene: 
   responses:
   - text: 1kg
     reaction: "Vous coulez aussi lentement qu'un gland d'apr\xE8s mes calculs."
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000}
   - text: 2kg
     reaction: "Un courant qui circulerait \xE0 100 km/h ne serait pas capable de vous
       emporter."
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000}
   - text: 3kg
     reaction: "La pouss\xE9e d'Archim\xE8de s'applique vraiment bien chez vous."
     nextQuestion: {fileID: 0}
-  game: {fileID: 0}
-  globalReaction: "Je ne trouve rien dans mes archives qui fasse votre poids et qui
-    soit dou\xE9 de parole. Vous \xEAtes peut-\xEAtre une esp\xE8ce \xE0 d\xE9couvrir."
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
-  globalNextQuestion: {fileID: 0}
+  globalReaction: "Je ne trouve rien dans mes archives qui fasse votre poids et qui
+    soit dou\xE9 de parole. Vous \xEAtes peut-\xEAtre une esp\xE8ce \xE0 d\xE9couvrir."
+  globalNextQuestion: {fileID: 11400000, guid: eca5aee8026436749ab5b63caabe638d, type: 2}

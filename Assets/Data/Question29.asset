@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question29
+  m_EditorClassIdentifier: 
+  question: "D\xE9sirez-vous conna\xEEtre ma synth\xE8se \xE0 votre sujet ?"
+  gameScene: 
+  responses:
+  - text: Non, je n'aime pas votre point de vue
+    reaction: 
+    nextQuestion: {fileID: 0}
+  - text: Oui avec plaisir.
+    reaction: 
+    nextQuestion: {fileID: 0}
+  - text: Cela changera quelque chose ?
+    reaction: 
+    nextQuestion: {fileID: 0}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: "Je vous remercie de votre confiance. J'ai pu calibrer mes donn\xE9es
+    sur les votres pour r\xE9pondre au mieux \xE0 vos attentes.\n\nLaissez-moi vous
+    afficher d\xE8s \xE0 pr\xE9sent la page qui appara\xEEtra dans l'encyclop\xE9die
+    la plus consult\xE9e du monde : Wikibulon.\n\nFIN - AFFICHAGE DE PAGE"
+  globalNextQuestion: {fileID: 0}
