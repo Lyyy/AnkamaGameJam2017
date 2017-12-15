@@ -14,6 +14,7 @@ MonoBehaviour:
   question: "Je pense qu'un aliment \xE0 base de beurre, de barre de chocolat, d'eau,
     de farine T45 et T55, de levure, de sel et de sucre vous ferait du bien. Je ne
     me souviens plus du nom commun.\n\nAuriez-vous une id\xE9e ?"
+  gameScene: Question5
   responses:
   - text: Un pain au chocolat ?
     reaction: "Oh, vous \xEAtes donc comme 70% de la population, int\xE9ressant."
@@ -21,12 +22,11 @@ MonoBehaviour:
   - text: Une chocolatine ?
     reaction: "Oh, vous \xEAtes donc comme 30% de la population, int\xE9ressant."
     nextQuestion: {fileID: 11400000, guid: d01d9a1c7e1955641b6e40ff57e3f0bc, type: 2}
-  game: {fileID: 0}
-  globalReaction: 
   waitingReactions:
   - Je crois qu'il y a un "B"
   - "Ou peut-\xEAtre \xE9tait-ce un X ?"
   - "Saviez-vous que le X est une lettre sym\xE9trique ?"
   minWaitingDuration: 2
   maxWaitingDuration: 2
+  globalReaction: 
   globalNextQuestion: {fileID: 0}
