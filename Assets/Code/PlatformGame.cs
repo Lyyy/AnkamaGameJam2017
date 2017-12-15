@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlatformGame : MonoBehaviour
+public class PlatformGame : Game
 {
     public Rigidbody2D player;
     public int speed = 500;

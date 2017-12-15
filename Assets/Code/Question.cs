@@ -6,12 +6,12 @@ public class Question : ScriptableObject
     [Multiline]
     public string question;
     public Response[] responses;
-    public GameObject game;
-    [Multiline]
-    public string globalReaction;
+    public string gameScene;
     [Multiline]
     public string[] waitingReactions;
     public float minWaitingDuration;
     public float maxWaitingDuration;
+    [Multiline]
+    public string globalReaction;
     public Question globalNextQuestion;
 }

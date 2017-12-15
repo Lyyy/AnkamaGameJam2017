@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameState : MonoBehaviour
@@ -24,6 +25,8 @@ public class GameState : MonoBehaviour
     
 	void Start ()
 	{
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(Camera.main.gameObject);
 	    instance = this;
 	    animator = GetComponent<Animator>();
 	    currentQuestion = startQuestion;
@@ -64,8 +67,9 @@ public class GameState : MonoBehaviour
     private IEnumerator SpawnGame()
     {
         canAnswer = true;
+        yield return SceneManager.LoadSceneAsync(currentQuestion.gameScene);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentQuestion.gameScene));
         animator.SetTrigger("DisplayGame");
-        yield break;
     }
 
     public void Answer(string anwser)
@@ -96,6 +100,8 @@ public class GameState : MonoBehaviour
             : currentResponse.reaction;
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
         var success = nextQuestion != currentQuestion;
+        if(success)
+            Game.GetInstance().Delete();
         yield return DisplayText(reaction, reactionText, true, success);
 
         if (success)
@@ -104,13 +110,11 @@ public class GameState : MonoBehaviour
             animator.SetTrigger("SuccessEnd");
             currentQuestion = nextQuestion;
             PrepareNextQuestion();
-            //destroy game
-            
         }
         else
         {
             ResetWaitingReactionTimer();
-            //restart game
+            yield return Game.GetInstance().Reload();
             canAnswer = true;
         }
     }
