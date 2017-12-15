@@ -84,6 +84,7 @@ public class GameState : MonoBehaviour
             return;
 
         canAnswer = false;
+        enableWaitingReaction = false;
         StopAllCoroutines();
         reaction.text = null;
         currentResponse = currentQuestion.responses.First(r => string.Equals(r.text, anwser));
