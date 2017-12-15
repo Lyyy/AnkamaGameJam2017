@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Cependant, je pense quand m\xEAme qu'il faudrait vous fournir en \xE9nergie.
     De quoi avez-vous besoin ?"
+  gameScene: Question4
   responses:
   - text: J'ai faim !
     reaction: 
@@ -27,13 +28,12 @@ MonoBehaviour:
       peut-\xEAtre fallu manger un peu. Je vais \xEAtre g\xE9n\xE9reux et annuler
       votre derni\xE8re action."
     nextQuestion: {fileID: 11400000}
-  game: {fileID: 0}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
   globalReaction: "Oh, laissez-moi vous pr\xE9senter la boulangerie pr\xE9f\xE9r\xE9e
     de mon propri\xE9taire.\n\nA gauche, \xE0 droite, tout droit, tout droit, tout
     droit, tout droit, tout droit, tout droit, tout droit, tout droit, tout droit,
     tout droit, tout droit, tout droit, tout droit...\n\nVous avez compris n'est-ce
     pas ? Ne tournez pas.\n\nOh, nous y sommes."
-  waitingReactions: []
-  minWaitingDuration: 0
-  maxWaitingDuration: 0
   globalNextQuestion: {fileID: 0}
