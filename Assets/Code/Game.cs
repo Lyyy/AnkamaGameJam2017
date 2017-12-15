@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     private static Game instance;
+    private bool canDisplayWaitingReaction = true;
+
+    public bool CanDisplayWaitingReaction
+    {
+        get { return canDisplayWaitingReaction; }
+        set { canDisplayWaitingReaction = value; }
+    }
 
     public static Game GetInstance()
     {

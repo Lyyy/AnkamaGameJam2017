@@ -136,7 +136,7 @@ public class GameState : MonoBehaviour
             return;
 
         waitingReactionTimer -= Time.deltaTime;
-        if (waitingReactionTimer < 0f)
+        if (waitingReactionTimer < 0f && Game.GetInstance().CanDisplayWaitingReaction)
         {
             ResetWaitingReactionTimer();
             StopAllCoroutines();
@@ -144,7 +144,12 @@ public class GameState : MonoBehaviour
         }
     }
 
-    private void ResetWaitingReactionTimer()
+    public void DisableWaitingReaction()
+    {
+        enableWaitingReaction = false;
+    }
+
+    public void ResetWaitingReactionTimer()
     {
         enableWaitingReaction = lastWaitingReactionIndex != currentQuestion.waitingReactions.Length;
         waitingReactionTimer = Random.Range(currentQuestion.minWaitingDuration, currentQuestion.maxWaitingDuration);

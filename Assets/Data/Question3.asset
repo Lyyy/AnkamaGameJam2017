@@ -14,6 +14,7 @@ MonoBehaviour:
   question: "Pour pouvoir vous assister comme il se doit, je dois \xE9tablir votre
     profil personnel.\r\n\r\nPuisque cela prendra du temps, je dois donc m'assurer
     que vous ayez assez d'\xE9nergie. Est-ce le cas ?"
+  gameScene: Question3
   responses:
   - text: Oui
     reaction: 
@@ -21,12 +22,11 @@ MonoBehaviour:
   - text: "L'\xE9nergie ?"
     reaction: 
     nextQuestion: {fileID: 0}
-  game: {fileID: 0}
-  globalReaction: Mm, j'ai l'impression que ma batterie descend dangereusement. Gardez
-    un oeil sur l'indicateur, afin que je puisse vous dire au revoir avant l'extinction.
   waitingReactions:
   - "Un de mes capteurs semble d\xE9faillant."
   - "Ah non, il semblerait qu'il y a bien un probl\xE8me."
   minWaitingDuration: 2
   maxWaitingDuration: 4
+  globalReaction: Mm, j'ai l'impression que ma batterie descend dangereusement. Gardez
+    un oeil sur l'indicateur, afin que je puisse vous dire au revoir avant l'extinction.
   globalNextQuestion: {fileID: 11400000, guid: 0ed340567381db149853f717f035bfec, type: 2}

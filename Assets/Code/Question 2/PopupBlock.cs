@@ -26,13 +26,17 @@ public class PopupBlock : MonoBehaviour
             {
                 popup.gameObject.SetActive(false);
                 popup.gameObject.SetActive(true);
-                var button =popup.GetComponentInChildren<Button>();
+                var button = popup.GetComponentInChildren<Button>();
+                GameState.GetInstance().DisableWaitingReaction();
                 button.onClick.RemoveAllListeners();
+                Game.GetInstance().CanDisplayWaitingReaction = false;
                 button.onClick.AddListener(delegate
                 {
                     GetComponentInChildren<Text>().text = "Oui";
                     popup.GetComponentInChildren<Button>().onClick.RemoveAllListeners();
                     spriteRenderer.color = initColor;
+                    GameState.GetInstance().ResetWaitingReactionTimer();
+                    Game.GetInstance().CanDisplayWaitingReaction = true;
                 });    
             }
         }
