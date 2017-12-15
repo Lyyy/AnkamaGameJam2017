@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LaMerNoireBlock : AnswerBlock
+public class LaMerNoireBlock : AutoDestroyingBlock
 {
 
     public GameObject next;
@@ -11,10 +11,7 @@ public class LaMerNoireBlock : AnswerBlock
         if (string.Equals(col.gameObject.name, "Player"))
         {
             if (next)
-            {
-                Destroy(gameObject);
                 next.SetActive(true);
-            }
         }
     }
 	
