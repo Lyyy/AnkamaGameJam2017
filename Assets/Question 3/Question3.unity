@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2118748836}
-  speed: 200
+  speed: 300
   jump: 7
 --- !u!4 &687929938
 Transform:

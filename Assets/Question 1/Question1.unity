@@ -681,7 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2118748836}
-  speed: 200
+  speed: 300
   jump: 7
 --- !u!4 &687929938
 Transform:
@@ -962,42 +962,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2043768331}
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 3.3091853
-      outSlope: 3.3091853
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.1875
-      value: 1
-      inSlope: -3.363546
-      outSlope: 1.3931887
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 0.475
-      value: 1
-      inSlope: -1.8966376
-      outSlope: 1.6196584
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 0.7375
-      value: 1
-      inSlope: -0.9713528
-      outSlope: 1.4889343
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1186663319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,42 +1394,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 348358333}
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 3.3091853
-      outSlope: 3.3091853
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.1875
-      value: 1
-      inSlope: -3.363546
-      outSlope: 1.3931887
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 0.475
-      value: 1
-      inSlope: -1.8966376
-      outSlope: 1.6196584
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 0.7375
-      value: 1
-      inSlope: -0.9713528
-      outSlope: 1.4889343
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1274083867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,42 +2200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1335266525}
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 3.3091853
-      outSlope: 3.3091853
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.1875
-      value: 1
-      inSlope: -3.363546
-      outSlope: 1.3931887
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 0.475
-      value: 1
-      inSlope: -1.8966376
-      outSlope: 1.6196584
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 0.7375
-      value: 1
-      inSlope: -0.9713528
-      outSlope: 1.4889343
-      tangentMode: 1
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &2118748835
 GameObject:
   m_ObjectHideFlags: 0

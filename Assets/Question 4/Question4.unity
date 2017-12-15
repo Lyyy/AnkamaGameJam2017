@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2118748836}
-  speed: 200
+  speed: 300
   jump: 7
   thirstyButton: {fileID: 1263829575}
   thirstyTrap: {fileID: 1592724094}

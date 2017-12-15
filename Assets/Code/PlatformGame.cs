@@ -6,7 +6,7 @@ public class PlatformGame : Game
     public int speed = 500;
     public int jump = 10;
 
-    private readonly ContactFilter2D filter = new ContactFilter2D().NoFilter();
+    private float previousVelocityY = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -14,14 +14,15 @@ public class PlatformGame : Game
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate ()
+	void Update ()
 	{
 	    var x = Input.GetAxis("Horizontal");
 		var velocity = player.velocity;
         velocity.x = Time.deltaTime * speed * x;
-	    if (Input.GetButtonDown("Jump") && Mathf.Abs(velocity.y) < 0.2f && player.IsTouching(filter))
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(velocity.y) < 0.1f && Mathf.Abs(previousVelocityY) < 0.1f)
             velocity.y = jump;
 	        
 	    player.velocity = velocity;
+	    previousVelocityY = velocity.y;
 	}
 }
