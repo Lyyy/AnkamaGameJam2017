@@ -13,20 +13,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Avez-vous l'appoint pour acheter votre chocolatine ? Je crois savoir qu'ils
     n'ont pas de monnaie.
+  gameScene: Question6
   responses:
   - text: "Sortir une pi\xE8ce d'1\u20AC"
     reaction: C'est moins.
-    nextQuestion: {fileID: 0}
+    nextQuestion: {fileID: 11400000}
   - text: "Sortir 0,95\u20AC"
     reaction: C'est moins.
     nextQuestion: {fileID: 11400000}
   - text: "Sortir 0,15\u20AC"
     reaction: On parle bien d'une chocolatine n'est-ce pas ?
     nextQuestion: {fileID: 11400000}
-  game: {fileID: 0}
-  globalReaction: "Bon, au moins, vous avez 92 centimes sur vous, c'est d\xE9j\xE0
-    bien."
+  - text: Hidden
+    reaction: "Bon, au moins, vous avez 92 centimes sur vous, c'est d\xE9j\xE0 bien."
+    nextQuestion: {fileID: 11400000, guid: eda2cda04b1255b4bbac96ffc1a98814, type: 2}
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
-  globalNextQuestion: {fileID: 11400000, guid: eda2cda04b1255b4bbac96ffc1a98814, type: 2}
+  globalReaction: 
+  globalNextQuestion: {fileID: 0}

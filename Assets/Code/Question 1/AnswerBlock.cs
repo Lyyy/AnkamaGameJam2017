@@ -5,7 +5,7 @@ public class AnswerBlock : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
 
-    void OnCollisionEnter2D(Collision2D col)
+    protected virtual void OnCollisionEnter2D(Collision2D col)
     {
         if (string.Equals(col.gameObject.name, "Player"))
         {
@@ -14,7 +14,7 @@ public class AnswerBlock : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+    protected virtual void OnCollisionExit2D(Collision2D col)
     {
         if (string.Equals(col.gameObject.name, "Player"))
         {

@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Question 5/Question5.unity
     guid: 2667c01db46b0e842b90efe56bdee5f9
+  - enabled: 1
+    path: Assets/Question 6/Question6.unity
+    guid: 50274580e46f05547877a8f874c131a9
