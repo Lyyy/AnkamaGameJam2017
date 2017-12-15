@@ -2,15 +2,14 @@
 
 public class PlatformGame : Game
 {
-    public Rigidbody2D player;
     public int speed = 300;
     public int jump = 7;
     private bool canJump = true;
     private float previousVelocityY = 0f;
 
-    private readonly ContactFilter2D filter = new ContactFilter2D().NoFilter(); 
+    private readonly ContactFilter2D filter = new ContactFilter2D().NoFilter();
 
-	// Update is called once per frame
+    // Update is called once per frame
 	protected virtual void Update ()
 	{
 	    var x = Input.GetAxis("Horizontal");
