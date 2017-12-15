@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class AnswerBloc : MonoBehaviour
+public class AnswerBlock : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
-    public AnimationCurve curve;
 
     void OnCollisionEnter2D(Collision2D col)
     {

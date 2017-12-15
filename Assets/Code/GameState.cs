@@ -68,7 +68,7 @@ public class GameState : MonoBehaviour
     private IEnumerator SpawnGame()
     {
         canAnswer = true;
-        if (!string.IsNullOrEmpty(currentQuestion.gameScene))
+        if (!string.IsNullOrEmpty(currentQuestion.gameScene) && (!Application.isEditor || !SceneManager.GetSceneByName(currentQuestion.gameScene).isLoaded))
         {
             yield return SceneManager.LoadSceneAsync(currentQuestion.gameScene);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentQuestion.gameScene));        

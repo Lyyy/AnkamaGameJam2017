@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Question2
   m_EditorClassIdentifier: 
   question: "\xCAtes-vous heureux de ne plus \xEAtre seul ?"
+  gameScene: Question2
   responses:
   - text: Oui
     reaction: 
@@ -22,12 +23,11 @@ MonoBehaviour:
   - text: Je ne sais pas encore
     reaction: 
     nextQuestion: {fileID: 0}
-  game: {fileID: 0}
-  globalReaction: "Je crois que je dois r\xE9pondre \"Tant mieux\".\nJe n'ai personnellement
-    pas d'avis particulier sur la question.\nVotre pr\xE9sence m'est indiff\xE9rente."
   waitingReactions:
   - Je ne vous jugerai pas.
   - "Qu'importe votre r\xE9ponse, je resterai l\xE0 pour vous."
   minWaitingDuration: 2
   maxWaitingDuration: 4
+  globalReaction: "Je crois que je dois r\xE9pondre \"Tant mieux\".\nJe n'ai personnellement
+    pas d'avis particulier sur la question.\nVotre pr\xE9sence m'est indiff\xE9rente."
   globalNextQuestion: {fileID: 11400000, guid: eacde38b7de740f4a851425a3742c49c, type: 2}
