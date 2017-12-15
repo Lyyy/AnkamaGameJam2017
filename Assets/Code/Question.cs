@@ -5,8 +5,8 @@ public class Question : ScriptableObject
 {
     [Multiline]
     public string question;
-    public Response[] responses;
     public string gameScene;
+    public Response[] responses;
     [Multiline]
     public string[] waitingReactions;
     public float minWaitingDuration;
