@@ -23,7 +23,7 @@ MonoBehaviour:
   - text: Arnaud
     reaction: 
     nextQuestion: {fileID: 0}
-  game: {fileID: 0}
+  gameScene: Question1
   globalReaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
     de l'appareil avec lequel vous entrez en contact."
   waitingReactions: []
