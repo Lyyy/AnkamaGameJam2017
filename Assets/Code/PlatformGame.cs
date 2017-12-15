@@ -22,7 +22,7 @@ public class PlatformGame : Game
             canJump = false;
             velocity.y = jump * -Mathf.Sign(Physics2D.gravity.y);
         } 
-        else if ((velocity.y - previousVelocityY > -Mathf.Sign(Physics2D.gravity.y) || Mathf.Approximately(velocity.y, 0f)) && isTouching)
+        else if (velocity.y - previousVelocityY > -Mathf.Sign(Physics2D.gravity.y) || Mathf.Approximately(velocity.y, 0f))
 	        canJump = true;
 	    
 	    player.velocity = velocity;

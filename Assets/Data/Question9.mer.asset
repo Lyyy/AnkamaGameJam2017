@@ -15,16 +15,25 @@ MonoBehaviour:
     le soleil sur ma batterie. Qu'importe, testons vos connaissances g\xE9ographiques
     pour continuer d'\xE9tablir votre profil personnel. Quelle mer voyez-vous devant
     vous ?"
+  gameScene: Question9
   responses:
   - text: La mer noire.
     reaction: "Peut-\xEAtre pourriez-vous retenter votre chance ?"
-    nextQuestion: {fileID: 0}
-  game: {fileID: 0}
-  globalReaction: "Tr\xE8s bien, je note votre m\xE9connaissance des mers du monde.
-    Vous trouverez bien une raison sans fondement \xE0 votre ignorance, ne vous en
-    faites pas. Vous auriez pu m'offrir une meilleure r\xE9ponse pour ma derni\xE8re
-    pulsation d'\xE9nergie."
+    nextQuestion: {fileID: 11400000}
+  - text: La mer noire ?
+    reaction: "N'avez-vous pas compris ma question pr\xE9c\xE9dente ?"
+    nextQuestion: {fileID: 11400000}
+  - text: La mer noire ??
+    reaction: Ne connaissez-vous qu'elle ?
+    nextQuestion: {fileID: 11400000}
+  - text: La mer noire ???
+    reaction: "Tr\xE8s bien, je note votre m\xE9connaissance des mers du monde. Vous
+      trouverez bien une raison sans fondement \xE0 votre ignorance, ne vous en faites
+      pas. Vous auriez pu m'offrir une meilleure r\xE9ponse pour ma derni\xE8re pulsation
+      d'\xE9nergie."
+    nextQuestion: {fileID: 11400000, guid: 3a62d5ef6055d924b9b9a157a1a004bc, type: 2}
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
-  globalNextQuestion: {fileID: 11400000, guid: 3a62d5ef6055d924b9b9a157a1a004bc, type: 2}
+  globalReaction: 
+  globalNextQuestion: {fileID: 0}
