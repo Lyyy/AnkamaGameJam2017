@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question20.montagne
+  m_EditorClassIdentifier: 
+  question: "L'odeur du sapin est un souvenir li\xE9 \xE0 No\xEBl. Je ne peux analyser
+    cette association, n'ayant pas de capteur olfactif. Vous avez un go\xFBt pr\xE9f\xE9r\xE9
+    ?"
+  gameScene: 
+  responses:
+  - text: Violet
+    reaction: 
+    nextQuestion: {fileID: 11400000, guid: d85d4b1c57ff94f4281f2cd4b7b5c897, type: 2}
+  - text: Orange
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  - text: Vert
+    reaction: 
+    nextQuestion: {fileID: 11400000}
+  waitingReactions:
+  - "Nous en avons d\xE9j\xE0 parl\xE9."
+  - "Peut-\xEAtre n'avez pas eu les bonnes informations cependant."
+  - "Un probl\xE8me de r\xE9seau ?"
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: "Une couleur en guise de go\xFBt ? Comme c'est \xE9trange. \"\"Ca
+    a un go\xFBt violet\"\"... Non \xE7a ne colle pas.\n\nJe note une incoh\xE9rence
+    de vos sens dans votre fiche.\n\nEn attendant, profitez du calme de ce lieu."
+  globalNextQuestion: {fileID: 0}
