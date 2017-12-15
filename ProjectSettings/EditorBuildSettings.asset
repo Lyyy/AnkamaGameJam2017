@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Question 7/Question7.unity
     guid: a8a15e86969673a4dac82daf642f54ec
+  - enabled: 1
+    path: Assets/Question 8/Question8.unity
+    guid: 5c2e05354ba180d4ea48aaa5918081c9

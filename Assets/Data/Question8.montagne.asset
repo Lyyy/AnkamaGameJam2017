@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Oh, mon extinction est proche. Je crois que vous appelez plut\xF4t cela
     la mort. Enfin peu importe. Votre vie dure depuis combien de temps ?"
+  gameScene: Question8
   responses:
   - text: 42 mois
     reaction: "De fa\xE7on objective, je sais que vous me mentez. Parler si jeune
@@ -26,9 +27,8 @@ MonoBehaviour:
       vite que le vent\r\nPlus vite que le temps\r\nM\xEAme en volant\r\nJe n'aurai
       pas le temps, pas le temps\""
     nextQuestion: {fileID: 11400000}
-  game: {fileID: 0}
-  globalReaction: "Si je comprends bien, vous avez de l'exp\xE9rience."
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
+  globalReaction: "Si je comprends bien, vous avez de l'exp\xE9rience."
   globalNextQuestion: {fileID: 0}
