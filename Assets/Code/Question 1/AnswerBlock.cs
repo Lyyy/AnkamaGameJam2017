@@ -10,7 +10,10 @@ public class AnswerBlock : MonoBehaviour
         if (string.Equals(col.gameObject.name, "Player"))
         {
             Game.GetInstance().Answer(GetComponentInChildren<Text>().text);
-            spriteRenderer.color *= 0.5f;
+            var color = spriteRenderer.color;
+            color *= 0.5f;
+            color.a = 1f;
+            spriteRenderer.color = color;
         }
     }
 

@@ -18,7 +18,10 @@ public class PopupBlock : MonoBehaviour
     {
         if (string.Equals(col.gameObject.name, "Player"))
         {
-            spriteRenderer.color *= 0.5f; 
+            var color = spriteRenderer.color;
+            color *= 0.5f;
+            color.a = 1f;
+            spriteRenderer.color = color;
             var text = GetComponentInChildren<Text>().text;
             if (string.Equals(validResponse, text))
                 Game.GetInstance().Answer(text);
@@ -32,7 +35,7 @@ public class PopupBlock : MonoBehaviour
                 Game.GetInstance().CanDisplayWaitingReaction = false;
                 button.onClick.AddListener(delegate
                 {
-                    GetComponentInChildren<Text>().text = "Oui";
+                    GetComponentInChildren<Text>().text = validResponse;
                     popup.GetComponentInChildren<Button>().onClick.RemoveAllListeners();
                     spriteRenderer.color = initColor;
                     GameState.GetInstance().ResetWaitingReactionTimer();
