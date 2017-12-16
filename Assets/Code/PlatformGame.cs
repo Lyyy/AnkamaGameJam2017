@@ -2,7 +2,7 @@
 
 public class PlatformGame : Game
 {
-    private int speed = 300;
+    private int speed = 5;
     private int jump = 7;
     private bool canJump = true;
     private float previousVelocityY = 0f;
@@ -24,7 +24,7 @@ public class PlatformGame : Game
 	    player.transform.localScale = scale;
 	    var x = Input.GetAxis("Horizontal");
 		var velocity = player.velocity;
-        velocity.x = Time.deltaTime * speed * x;
+        velocity.x = speed * x;
 	    player.GetComponent<Animator>().SetBool("Running", !Mathf.Approximately(velocity.x, 0f));
 	    var isTouching = player.IsTouching(filter);
         if (Input.GetButtonDown("Jump") && canJump && Mathf.Abs(velocity.y) < 1f && isTouching)
