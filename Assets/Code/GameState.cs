@@ -81,6 +81,9 @@ public class GameState : MonoBehaviour
         if (!canAnswer)
             return false;
 
+        if (anwser.Contains("Allons à la"))
+            BackgroundSwitcher.isSea = anwser.Contains("mer");
+
         canAnswer = false;
         enableWaitingReaction = false;
         StopAllCoroutines();

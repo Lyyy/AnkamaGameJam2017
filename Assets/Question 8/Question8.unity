@@ -2237,6 +2237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985953744}
   - component: {fileID: 1985953745}
+  - component: {fileID: 1985953746}
   m_Layer: 0
   m_Name: Decor_Boulangerie_Jour
   m_TagString: Untagged
@@ -2291,7 +2292,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: f32de432c5bdf9c42890b3f9dee9b5cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9c155547abe5874ba702d35b1a62cd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.60784316}
   m_FlipX: 0
   m_FlipY: 0
@@ -2301,6 +2302,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1985953746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1985953743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a0dcef5633392418ddc463a29b5b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sea: {fileID: 21300000, guid: d9c155547abe5874ba702d35b1a62cd1, type: 3}
+  mountain: {fileID: 21300000, guid: 08732e0b150c17a4e9e1e3d315ace7ad, type: 3}
 --- !u!1 &2019916141
 GameObject:
   m_ObjectHideFlags: 0
