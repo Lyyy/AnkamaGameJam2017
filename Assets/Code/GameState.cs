@@ -111,6 +111,7 @@ public class GameState : MonoBehaviour
             ? currentQuestion.globalReaction
             : currentResponse.reaction;
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
+        var end = string.Equals(nextQuestion.name, "End");
         var success = nextQuestion != currentQuestion;
         if (success && Game.GetInstance() != null)
         {
@@ -120,11 +121,15 @@ public class GameState : MonoBehaviour
                 GetComponent<StudioEventEmitter>().SetParameter("MusicTransition", nextQuestion.soundTransition);
             }
         }
-        yield return DisplayText(reaction, reactionText, true, success);
+        yield return DisplayText(reaction, reactionText, !end, success);
 
         if (success)
         {
-            yield return StartCoroutine(FadeReaction());
+            if (end)
+            {
+                Application.OpenURL("https://fr.wikipedia.org/wiki/Z%C3%A9bulon");
+                yield break;
+            }
             animator.SetTrigger("SuccessEnd");
             currentQuestion = nextQuestion;
             PrepareNextQuestion();

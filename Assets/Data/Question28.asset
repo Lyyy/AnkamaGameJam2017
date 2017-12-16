@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "La lucidit\xE9 est aussi de savoir o\xF9 s'arr\xEAte ses comp\xE9tences.
     Savez-vous ce que vous ferez dans 1 mois \xE0 la m\xEAme heure ?"
-  gameScene: 
+  gameScene: Question28
   responses:
   - text: Je serai loin de vous.
     reaction: 

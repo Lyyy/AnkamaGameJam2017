@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Question29
   m_EditorClassIdentifier: 
   question: "D\xE9sirez-vous conna\xEEtre ma synth\xE8se \xE0 votre sujet ?"
-  gameScene: 
+  gameScene: Question29
   responses:
   - text: Non, je n'aime pas votre point de vue
     reaction: 
@@ -29,5 +29,6 @@ MonoBehaviour:
   globalReaction: "Je vous remercie de votre confiance. J'ai pu calibrer mes donn\xE9es
     sur les votres pour r\xE9pondre au mieux \xE0 vos attentes.\n\nLaissez-moi vous
     afficher d\xE8s \xE0 pr\xE9sent la page qui appara\xEEtra dans l'encyclop\xE9die
-    la plus consult\xE9e du monde : Wikibulon.\n\nFIN - AFFICHAGE DE PAGE###"
-  globalNextQuestion: {fileID: 0}
+    la plus consult\xE9e du monde : Wikibulon.\n\nFIN."
+  globalNextQuestion: {fileID: 11400000, guid: d054c0fb2d2d47442946aab348938be1, type: 2}
+  soundTransition: 0
