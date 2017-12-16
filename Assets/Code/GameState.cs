@@ -82,7 +82,7 @@ public class GameState : MonoBehaviour
             return false;
 
         if (anwser.Contains("Allons à la"))
-            BackgroundSwitcher.isSea = anwser.Contains("mer");
+            BackgroundSwitcher.isSea = !anwser.Contains("mer");
 
         canAnswer = false;
         enableWaitingReaction = false;
