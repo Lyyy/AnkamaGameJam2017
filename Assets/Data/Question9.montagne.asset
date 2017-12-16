@@ -17,10 +17,10 @@ MonoBehaviour:
   responses:
   - text: Je ne sens plus mes doigts.
     reaction: 
-    nextQuestion: {fileID: 11400000, guid: 9a19431abc34cba4c8069fd7f7995b66, type: 2}
+    nextQuestion: {fileID: 11400000, guid: fdfea7626580e74468e9155766d40bd5, type: 2}
   - text: Je ne sens plus mes pieds.
     reaction: 
-    nextQuestion: {fileID: 11400000, guid: 9a19431abc34cba4c8069fd7f7995b66, type: 2}
+    nextQuestion: {fileID: 11400000, guid: fdfea7626580e74468e9155766d40bd5, type: 2}
   - text: "Je vais tr\xE8s bien."
     reaction: 
     nextQuestion: {fileID: 0}
