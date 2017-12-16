@@ -40,7 +40,6 @@ public class Question4 : PlatformGame
     private IEnumerator FadeIn()
     {
         var color = whitePanel.color;
-        color.a *= 0.1f;        
         while (color.a < 1f)
         {
             color.a = Mathf.Clamp01(color.a + Time.deltaTime * 0.1f);

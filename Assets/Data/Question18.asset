@@ -15,18 +15,17 @@ MonoBehaviour:
     mauvaise situation. Moi, si je devais r\xE9sumer ma vie aujourd'hui avec vous,
     je dirais que je vous ai conduit dans un endroit sans possibilit\xE9 d'utiliser
     le bluetooth. J'\xE9tais alors seul chez moi. Vous avez cru que j'avais disparu
-    ?#\n\nC'est assez curieux de se dire que j'ai trouv\xE9 une parade pour utiliser
+    ?#\r\n\r\nC'est assez curieux de se dire que j'ai trouv\xE9 une parade pour utiliser
     les SMS tout en se servant de l'oreillette pour les restranscrire. Bien s\xFBr
-    ma voix n'est plus tout \xE0 fait la m\xEAme. Comme celles des \xEAtres vivants.\n\nAlors
+    ma voix n'est plus tout \xE0 fait la m\xEAme. Comme celles des \xEAtres vivants.\r\n\r\nAlors
     ce n'est pas mon cas, je suis un mat\xE9riel \xE9lectronique sans cordes vocales.
     Et je dis merci aux votres qui ont de tr\xE8s belles courbes \xE0 analyser. Je
     note \xE7a dans votre fiche personnelle. A ce stade, je commence \xE0 vous comprendre
-    un peu mieux.\n\nCe n'est probablement pas r\xE9ciproque \xE9tant donn\xE9 les
-    pr\xE9c\xE9dents relev\xE9s effectu\xE9s au cours de notre conversation. Et je
-    vous r\xE9ponds tr\xE8s sinc\xE8rement : je n'ai pas besoin de votre compr\xE9hension,
-    je suis programm\xE9 pour m'autosuffire.\n\nJe vous propose de poursuivre notre
-    conversation afin de continuer l'analyse de votre personnalit\xE9."
-  gameScene: 
+    un peu mieux.\r\n\r\n\r\nCe n'est probablement pas r\xE9ciproque \xE9tant donn\xE9
+    les pr\xE9c\xE9dents relev\xE9s effectu\xE9s au cours de notre conversation. Et
+    je vous r\xE9ponds tr\xE8s sinc\xE8rement : je n'ai pas besoin de votre compr\xE9hension,
+    je suis programm\xE9 pour m'autosuffire."
+  gameScene: Question18
   responses:
   - text: "Oui bien s\xFBr !"
     reaction: 
