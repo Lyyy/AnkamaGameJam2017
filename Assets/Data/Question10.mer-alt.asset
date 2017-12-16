@@ -13,10 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Ne me laissez pas m'\xE9teindre de cette fa\xE7on voyons. Vous vous pr\xE9lassez
     pendant que ma batterie se vide. Vous ne pouvez rien faire ?"
-  gameScene: 
+  gameScene: Question10
   responses:
   - text: Non
-    reaction: 
+    reaction: "Je n'aurais pas r\xE9pondu cela. Heureusement, j'ai pu me d\xE9brouiller
+      par moi-m\xEAme. Je suis maintenant raccord\xE9 \xE9lectriquement, pouvant continuer
+      de vous tenir si bien compagnie."
     nextQuestion: {fileID: 11400000, guid: 20eb5d4bcbad7564080d769d1dfc391e, type: 2}
   - text: Coupez notre communication.
     reaction: 

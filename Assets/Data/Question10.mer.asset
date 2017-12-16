@@ -13,9 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "Ne me laissez pas m'\xE9teindre de cette fa\xE7on voyons. Vous vous pr\xE9lassez
     pendant que ma batterie se vide. Vous ne pouvez rien faire ?"
+  gameScene: Question10
   responses:
   - text: Non
-    reaction: 
+    reaction: "Je n'aurais pas r\xE9pondu cela. Heureusement, j'ai pu me d\xE9brouiller
+      par moi-m\xEAme. Je suis maintenant raccord\xE9 \xE9lectriquement, pouvant continuer
+      de vous tenir si bien compagnie."
     nextQuestion: {fileID: 11400000, guid: 25243a1b5edf8df4f908cc3df3e244af, type: 2}
   - text: Coupez notre communication.
     reaction: 
@@ -23,12 +26,11 @@ MonoBehaviour:
   - text: "J'aime vous voir vous \xE9teindre."
     reaction: 
     nextQuestion: {fileID: 11400000}
-  game: {fileID: 0}
-  globalReaction: 
   waitingReactions:
   - "Allons, je sais que vous ne voulez pas r\xE9pondre cela."
   - "Vraiment ? R\xE9fl\xE9chissez."
   - L'intelligence n'est pas votre principal atout.
   minWaitingDuration: 3
   maxWaitingDuration: 6
+  globalReaction: 
   globalNextQuestion: {fileID: 0}
