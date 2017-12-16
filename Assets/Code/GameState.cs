@@ -22,6 +22,7 @@ public class GameState : MonoBehaviour
     private int lastWaitingReactionIndex = -1;
     private bool enableWaitingReaction = false;
     private bool canAnswer = false;
+    private FMOD.Studio.EventInstance writingSoundEvent;
 
     public static GameState instance;
     
@@ -37,7 +38,8 @@ public class GameState : MonoBehaviour
             button.onClick.AddListener(() => Answer(button.GetComponentInChildren<Text>().text));
         PrepareNextQuestion();
 	    StartCoroutine(DisplayQuestion());
-	}
+        writingSoundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Writing");
+    }
 
     public static GameState GetInstance()
     {
@@ -194,23 +196,38 @@ public class GameState : MonoBehaviour
 
             for (var j = 1; j <= t.Length; j++)
             {
+                FMOD.Studio.PLAYBACK_STATE playbackState;
+                writingSoundEvent.getPlaybackState(out playbackState);
+                if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED && t[j - 1] != '.')
+                {
+                    writingSoundEvent.start();
+                }
+                if (t[j - 1] == '.')
+                {
+                    writingSoundEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                }
+
                 text.text = t.Substring(0, j) + whiteValue.Substring(j, whiteValue.Length - j);
                 yield return new WaitForSeconds((t[j - 1] == '.' ? 0.5f : 0.04f) / multiplier);
                 if (j < t.Length && t[j] == '#')
                 {
                     if (!canAnswer && text == question)
                         StartCoroutine(SpawnGame());
+                    writingSoundEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                     yield return new WaitForSeconds(3f / multiplier);
                     t = t.Remove(j, 1);
                 }
             }
             if (i < values.Length - 1)
             {
+                writingSoundEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 yield return new WaitForSeconds(Mathf.Clamp(reaction.text.Length * 0.03f, 0.75f, 3f) / multiplier);
                 text.text = "";
             }
         }
         
+        writingSoundEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
         if (fade)
         {
             var coroutine = StartCoroutine(FadeReaction());

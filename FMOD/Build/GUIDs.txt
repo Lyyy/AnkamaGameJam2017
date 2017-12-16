@@ -1,5 +1,6 @@
 {39d490fc-7232-48fa-b3cb-43fc691358c0} event:/Music
 {9c877616-f0dd-4638-8e93-0b939f82fc65} event:/Jump
+{3e664890-13fb-47fb-821b-363498242a05} event:/Writing
 {408503c8-47e8-44cb-92d5-047d796b0a51} bus:/
 {cc8fdb45-1805-4715-a1b8-5ff19406e43e} bus:/Reverb
 {49936db0-3188-4285-b95c-8c50cb7e3efb} bank:/Master Bank
