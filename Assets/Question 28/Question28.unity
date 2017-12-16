@@ -899,7 +899,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 512782205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d099c9ce0e1d648b1329c6bfd14112, type: 3}
+  m_Script: {fileID: 11500000, guid: 98fc207144cd97c44a257a76468d5e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 225784715}
@@ -2825,7 +2825,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1250177877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d099c9ce0e1d648b1329c6bfd14112, type: 3}
+  m_Script: {fileID: 11500000, guid: 98fc207144cd97c44a257a76468d5e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1475499347}
@@ -4327,7 +4327,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872656687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4d099c9ce0e1d648b1329c6bfd14112, type: 3}
+  m_Script: {fileID: 11500000, guid: 98fc207144cd97c44a257a76468d5e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1980006109}
