@@ -36,3 +36,4 @@ MonoBehaviour:
     la peur de la douleur, ou son id\xE9e elle-m\xEAme. Si vous pouviez... supprimer
     de vos r\xE9ponses ces donn\xE9es inutiles ce serait pr\xE9f\xE9rable."
   globalNextQuestion: {fileID: 0}
+  soundTransition: 2

@@ -14,4 +14,5 @@ public class Question : ScriptableObject
     [Multiline]
     public string globalReaction;
     public Question globalNextQuestion;
+    public float soundTransition;
 }

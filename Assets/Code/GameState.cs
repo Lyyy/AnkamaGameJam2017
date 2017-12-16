@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class GameState : MonoBehaviour
 {
@@ -110,7 +111,13 @@ public class GameState : MonoBehaviour
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
         var success = nextQuestion != currentQuestion;
         if (success && Game.GetInstance() != null)
+        {
             Game.GetInstance().Delete();
+            if (nextQuestion.soundTransition > 0.01f)
+            {
+                GetComponent<StudioEventEmitter>().SetParameter("MusicTransition", nextQuestion.soundTransition);
+            }
+        }
         yield return DisplayText(reaction, reactionText, true, success);
 
         if (success)

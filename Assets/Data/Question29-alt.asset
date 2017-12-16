@@ -31,3 +31,4 @@ MonoBehaviour:
     afficher d\xE8s \xE0 pr\xE9sent la page qui appara\xEEtra dans l'encyclop\xE9die
     la plus consult\xE9e du monde : Wikibulon.\n\nFIN - AFFICHAGE DE PAGE###"
   globalNextQuestion: {fileID: 0}
+  soundTransition: 5

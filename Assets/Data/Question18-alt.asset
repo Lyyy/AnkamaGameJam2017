@@ -36,3 +36,4 @@ MonoBehaviour:
   globalReaction: "La nuit vient de tomber. Je vous propose de ne pas trop tra\xEEner
     dans le coin. Apr\xE8s tout, qui sait ce qui nous attend dans les bois."
   globalNextQuestion: {fileID: 11400000, guid: 2fcb69d8c4ca7914581222b74103f7cf, type: 2}
+  soundTransition: 4

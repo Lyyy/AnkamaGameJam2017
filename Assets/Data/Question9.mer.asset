@@ -31,9 +31,10 @@ MonoBehaviour:
       trouverez bien une raison sans fondement \xE0 votre ignorance, ne vous en faites
       pas. Vous auriez pu m'offrir une meilleure r\xE9ponse pour ma derni\xE8re pulsation
       d'\xE9nergie."
-    nextQuestion: {fileID: 11400000, guid: 3a62d5ef6055d924b9b9a157a1a004bc, type: 2}
+    nextQuestion: {fileID: 11400000, guid: da41b3f4e7c19f347896f7afaa70cd4c, type: 2}
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
   globalReaction: 
   globalNextQuestion: {fileID: 0}
+  soundTransition: 3

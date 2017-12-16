@@ -32,3 +32,4 @@ MonoBehaviour:
     cette possibilit\xE9 \xE0 95%. D'ailleurs, j'ai fini votre profil personnel. Il
     ne me reste qu'une derni\xE8re question."
   globalNextQuestion: {fileID: 0}
+  soundTransition: 5

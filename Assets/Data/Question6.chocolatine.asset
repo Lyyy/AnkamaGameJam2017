@@ -32,3 +32,4 @@ MonoBehaviour:
   maxWaitingDuration: 0
   globalReaction: 
   globalNextQuestion: {fileID: 0}
+  soundTransition: 1

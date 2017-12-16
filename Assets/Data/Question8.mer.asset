@@ -32,3 +32,4 @@ MonoBehaviour:
   maxWaitingDuration: 0
   globalReaction: "Si je comprends bien, vous avez de l'exp\xE9rience."
   globalNextQuestion: {fileID: 0}
+  soundTransition: 3

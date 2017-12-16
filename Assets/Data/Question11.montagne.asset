@@ -32,3 +32,4 @@ MonoBehaviour:
   globalReaction: "Je ne trouve rien dans mes archives qui fasse votre poids et qui
     soit dou\xE9 de parole. Vous \xEAtes peut-\xEAtre une esp\xE8ce \xE0 d\xE9couvrir."
   globalNextQuestion: {fileID: 11400000, guid: eca5aee8026436749ab5b63caabe638d, type: 2}
+  soundTransition: 2

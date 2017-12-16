@@ -38,3 +38,4 @@ MonoBehaviour:
     un peu. Venez donc dans un endroit rempli de f\xE9es et... Vous m'avez cru ? Mais
     voyons, il ne s'agit que de chim\xE8res."
   globalNextQuestion: {fileID: 11400000, guid: 60f060f21895fc54d94eb8173bb81bc6, type: 2}
+  soundTransition: 2
