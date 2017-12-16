@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question28-alt
+  m_EditorClassIdentifier: 
+  question: "La lucidit\xE9 est aussi de savoir o\xF9 s'arr\xEAte ses comp\xE9tences.
+    Savez-vous ce que vous ferez dans 1 mois \xE0 la m\xEAme heure ?"
+  gameScene: 
+  responses:
+  - text: Je serai loin de vous.
+    reaction: 
+    nextQuestion: {fileID: 11400000, guid: 8e2bb91956ddc9e40a02aea2b078a6cc, type: 2}
+  - text: "Je chanterais, ne vous d\xE9plaise."
+    reaction: "Vous chanterez, ce sont des foutaises. Vous n'\xEAtes pas omniscient."
+    nextQuestion: {fileID: 11400000}
+  - text: '...'
+    reaction: "Cette r\xE9ponse n'est pas tr\xE8s \xE9loquente. Pourriez-vous la reformuler
+      ?"
+    nextQuestion: {fileID: 11400000}
+  waitingReactions: []
+  minWaitingDuration: 0
+  maxWaitingDuration: 0
+  globalReaction: "La distance sera probablement \xE9tablie, les statistiques estiment
+    cette possibilit\xE9 \xE0 95%. D'ailleurs, j'ai fini votre profil personnel. Il
+    ne me reste qu'une derni\xE8re question."
+  globalNextQuestion: {fileID: 0}

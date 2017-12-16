@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
+  m_Name: Question12.montagne-alt
+  m_EditorClassIdentifier: 
+  question: "Puisque je dois vous d\xE9couvrir, j'aimerais que vous fassiez quelque
+    chose pour moi. Vous allez toujours bien ?"
+  gameScene: Question1
+  responses:
+  - text: "Mais, vous ne m'avez pas pos\xE9 la question !"
+    reaction: .
+    nextQuestion: {fileID: 11400000}
+  - text: Euh... oui
+    reaction: 
+    nextQuestion: {fileID: 0}
+  - text: Non, vous me faites peur.
+    reaction: .
+    nextQuestion: {fileID: 11400000}
+  waitingReactions:
+  - Moi je me sens bien.
+  - "M\xEAme tr\xE8s bien."
+  - "Le flux \xE9lectrique qui me parcourt le corps doit grandement y contribuer."
+  minWaitingDuration: 2
+  maxWaitingDuration: 4
+  globalReaction: "Michel, je sais que vous passez un excellent moment en ma compagnie.
+    Vous vous appelez bien Michel n'est-ce pas ?\n\nJ'aimerai vous faire r\xEAver
+    un peu. Venez donc dans un endroit rempli de f\xE9es et... Vous m'avez cru ? Mais
+    voyons, il ne s'agit que de chim\xE8res."
+  globalNextQuestion: {fileID: 11400000, guid: 60f060f21895fc54d94eb8173bb81bc6, type: 2}
