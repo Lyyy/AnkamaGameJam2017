@@ -6,8 +6,15 @@ public class PlatformGame : Game
     private int jump = 7;
     private bool canJump = true;
     private float previousVelocityY = 0f;
+    private FMOD.Studio.EventInstance jumpSoundEvent;
 
     private readonly ContactFilter2D filter = new ContactFilter2D().NoFilter();
+
+    protected override void Awake ()
+    {
+        base.Awake();
+        jumpSoundEvent = FMODUnity.RuntimeManager.CreateInstance("event:/Jump");
+    }
 
     // Update is called once per frame
 	protected virtual void Update ()
@@ -25,6 +32,9 @@ public class PlatformGame : Game
             canJump = false;
             velocity.y = jump * -Mathf.Sign(Physics2D.gravity.y);
             player.GetComponent<Animator>().SetTrigger("Jumping");
+            // Jump sound
+            jumpSoundEvent.setParameterValue("JumpPitch", Random.Range(0f, 1f));
+            jumpSoundEvent.start();
         } 
         else if (velocity.y - previousVelocityY > -Mathf.Sign(Physics2D.gravity.y) || Mathf.Approximately(velocity.y, 0f))
 	        canJump = true;

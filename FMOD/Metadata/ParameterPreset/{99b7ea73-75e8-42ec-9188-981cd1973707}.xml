@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{99b7ea73-75e8-42ec-9188-981cd1973707}">
+        <property name="name">
+            <value>JumpPitch</value>
+        </property>
+        <relationship name="folder">
+            <destination>{3032d853-4dc3-4bb0-8d32-07282838f5b8}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{8e691ac1-e204-4c93-882c-860d650e578b}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{8e691ac1-e204-4c93-882c-860d650e578b}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
