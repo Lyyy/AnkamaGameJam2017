@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: {fileID: 1094095606}
   reaction: {fileID: 940283387}
-  startQuestion: {fileID: 11400000, guid: 52e91fd7cf4c66d4f91606882d6d9679, type: 2}
+  startQuestion: {fileID: 11400000, guid: 031605f19af40aa46b4b218e49c9aa94, type: 2}
   debug: 0
   debugPanel: {fileID: 658574458}
   debugButtons:

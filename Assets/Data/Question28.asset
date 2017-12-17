@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Question28
   m_EditorClassIdentifier: 
   question: "La lucidit\xE9 est aussi de savoir o\xF9 s'arr\xEAte ses comp\xE9tences.
-    Savez-vous ce que vous ferez dans 1 mois \xE0 la m\xEAme heure ?"
+    Savez-vous ce que vous ferez dans 1 mois \xE0 la m\xEAme heure\_?"
   gameScene: Question28
   responses:
   - text: Je serai loin de vous.
@@ -32,3 +32,4 @@ MonoBehaviour:
     cette possibilit\xE9 \xE0 95%. D'ailleurs, j'ai fini votre profil personnel. Il
     ne me reste qu'une derni\xE8re question."
   globalNextQuestion: {fileID: 0}
+  soundTransition: 0
