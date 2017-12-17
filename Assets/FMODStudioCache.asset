@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 114321477393419654}
   MasterBankRef: {fileID: 114708126237728264}
   StringsBankRef: {fileID: 114017055321936004}
-  stringsBankWriteTime: 636490109174932112
+  stringsBankWriteTime: 636490433874451875
   cacheVersion: 2
 --- !u!114 &114017055321936004
 MonoBehaviour:
@@ -34,7 +34,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636490109174932112
+  lastModified: 636490433874451875
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -104,7 +104,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114673862970776694}
+  - {fileID: 114380969305526292}
   MinDistance: 0
   MaxDistance: 0
   Length: 58
@@ -130,6 +130,36 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 15595
+--- !u!114 &114374443904472432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MusicTransition
+  Min: 0
+  Max: 5
+  Default: 0
+--- !u!114 &114380969305526292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: JumpPitch
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114436666958308694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +239,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114993677643932826}
+  - {fileID: 114374443904472432}
   MinDistance: 0
   MaxDistance: 0
   Length: 380000
@@ -270,11 +300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\projects\AnkamaGameJam2017\FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 636490109174912104
+  lastModified: 636490433874441873
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 5671840
+    Value: 5672032
   Exists: 1
 --- !u!114 &114716767148857846
 MonoBehaviour:

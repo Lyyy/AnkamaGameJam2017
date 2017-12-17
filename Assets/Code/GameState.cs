@@ -61,6 +61,10 @@ public class GameState : MonoBehaviour
 
     private IEnumerator DisplayQuestion()
     {
+        if (currentQuestion.soundTransition > 0.01f)
+        {
+            GetComponent<StudioEventEmitter>().SetParameter("MusicTransition", currentQuestion.soundTransition);
+        }
         yield return DisplayText(question, currentQuestion.question, false, false);
         lastWaitingReactionIndex = 0;
         ResetWaitingReactionTimer();
