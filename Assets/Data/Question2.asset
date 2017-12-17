@@ -28,6 +28,7 @@ MonoBehaviour:
   - "Qu'importe votre r\xE9ponse, je resterai l\xE0 pour vous."
   minWaitingDuration: 2
   maxWaitingDuration: 4
-  globalReaction: "Je crois que je dois r\xE9pondre \"Tant mieux\".\nJe n'ai personnellement
-    pas d'avis particulier sur la question.\nVotre pr\xE9sence m'est indiff\xE9rente."
+  globalReaction: "Je crois que je dois r\xE9pondre \"\"Tant mieux\"\"...\n\nJe n'ai
+    personnellement pas d'avis particulier sur la question. Votre pr\xE9sence m'indiff\xE8re."
   globalNextQuestion: {fileID: 11400000, guid: eacde38b7de740f4a851425a3742c49c, type: 2}
+  soundTransition: 0

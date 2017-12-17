@@ -33,7 +33,7 @@ MonoBehaviour:
   maxWaitingDuration: 0
   globalReaction: "Oh, laissez-moi vous pr\xE9senter la boulangerie pr\xE9f\xE9r\xE9e
     de mon propri\xE9taire.\n\nA gauche, \xE0 droite, tout droit, tout droit, tout
-    droit, tout droit, tout droit, tout droit, tout droit, tout droit, tout droit,
-    tout droit, tout droit, tout droit, tout droit...\n\nVous avez compris n'est-ce
-    pas ? Ne tournez pas.\n\nOh, nous y sommes."
+    droit, tout droit, ...\n\nVous avez compris n'est-ce pas ? Ne tournez pas et nous
+    arriverons.\n\nOh, nous y sommes."
   globalNextQuestion: {fileID: 0}
+  soundTransition: 0
