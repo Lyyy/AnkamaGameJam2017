@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Question4
   m_EditorClassIdentifier: 
   question: "Cependant, je pense quand m\xEAme qu'il faudrait vous fournir en \xE9nergie.
-    De quoi avez-vous besoin ?"
+    De quoi avez-vous besoin\_?"
   gameScene: Question4
   responses:
   - text: J'ai faim !
