@@ -19,7 +19,7 @@ public class AnswerBlock : MonoBehaviour
 
     protected virtual void OnCollisionExit2D(Collision2D col)
     {
-        if (string.Equals(col.gameObject.name, "Player"))
+        if (string.Equals(col.gameObject.name, "Player") && !GameState.GetInstance().ValidAnswer)
         {
             spriteRenderer.color *= 2f;
         }

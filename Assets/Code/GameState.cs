@@ -22,6 +22,8 @@ public class GameState : MonoBehaviour
     private int lastWaitingReactionIndex = -1;
     private bool enableWaitingReaction = false;
     private bool canAnswer = false;
+    private bool validAnswer = false;
+
     private FMOD.Studio.EventInstance writingSoundEvent;
 
     public static GameState instance;
@@ -46,8 +48,14 @@ public class GameState : MonoBehaviour
         return instance;
     }
 
+    public bool ValidAnswer
+    {
+        get { return validAnswer; }
+    }
+
     private void PrepareNextQuestion()
     {
+        validAnswer = false;
         question.text = null;
         reaction.text = null;
         for (var i = 0; i < currentQuestion.responses.Length; i++)
@@ -97,7 +105,8 @@ public class GameState : MonoBehaviour
         reaction.text = null;
         currentResponse = currentQuestion.responses.First(r => string.Equals(r.text, anwser));
         var nextQuestion = currentResponse.nextQuestion ?? currentQuestion.globalNextQuestion;
-        animator.SetTrigger(nextQuestion == currentQuestion ? "Fail" : "Success");
+        validAnswer = nextQuestion != currentQuestion;
+        animator.SetTrigger(validAnswer ? "Success" : "Fail");
         return true;
     }
 

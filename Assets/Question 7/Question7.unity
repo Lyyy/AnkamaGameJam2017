@@ -921,9 +921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4436158087a76d8409989bc664f2bdbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2118748836}
-  speed: 300
-  jump: 7
 --- !u!4 &687929938
 Transform:
   m_ObjectHideFlags: 0
@@ -1581,10 +1578,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507242603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98fc207144cd97c44a257a76468d5e5b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac0722cdaf1e50142b2b942014c72855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 622705626}
+  newAnswer: "Allons \xE0 la mer !"
 --- !u!212 &1507242606
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2191,10 +2189,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1872656687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98fc207144cd97c44a257a76468d5e5b, type: 3}
+  m_Script: {fileID: 11500000, guid: ac0722cdaf1e50142b2b942014c72855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1980006109}
+  newAnswer: "Allons \xE0 la montagne !"
 --- !u!212 &1872656690
 SpriteRenderer:
   m_ObjectHideFlags: 0

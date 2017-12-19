@@ -2,7 +2,7 @@
 
 public class PlatformGame : Game
 {
-    private int speed = 5;
+    private int speed = 3;
     private int jump = 7;
     private bool canJump = true;
     private float previousVelocityY = 0f;
