@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Name: Question8.montagne
   m_EditorClassIdentifier: 
   question: "Oh, mon extinction est proche. Je crois que vous appelez plut\xF4t cela
-    la mort. Enfin peu importe. Votre vie dure depuis combien de temps ?"
+    la mort. Enfin peu importe.\n\nVotre vie dure depuis combien de temps ?"
   gameScene: Question8
   responses:
-  - text: 42 mois
+  - text: 42 jours
     reaction: "De fa\xE7on objective, je sais que vous me mentez. Parler si jeune
       ? Je ne peux pas ins\xE9rer ces donn\xE9es en base."
     nextQuestion: {fileID: 11400000}

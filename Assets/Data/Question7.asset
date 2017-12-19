@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab4f543805c34c498071734dfb0919e, type: 3}
   m_Name: Question7
   m_EditorClassIdentifier: 
-  question: "Oops, je crois que je vais bient\xF4t m'\xE9teindre. Vous voulez bien
+  question: "Oops, je crois que je vais bient\xF4t m'\xE9teindre.\n\nVous voulez bien
     m'emmener en vacances avant qu'il ne soit trop tard ?"
   gameScene: Question7
   responses:

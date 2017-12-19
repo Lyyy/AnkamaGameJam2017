@@ -589,8 +589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4436158087a76d8409989bc664f2bdbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
-  jump: 7
 --- !u!4 &687929938
 Transform:
   m_ObjectHideFlags: 0
@@ -674,7 +672,7 @@ GameObject:
   - component: {fileID: 919027402}
   - component: {fileID: 919027401}
   m_Layer: 0
-  m_Name: 42 mois
+  m_Name: 42 jours
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1911,7 +1909,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 42 mois
+  m_Text: 42 jours
 --- !u!222 &1774273214
 CanvasRenderer:
   m_ObjectHideFlags: 0
