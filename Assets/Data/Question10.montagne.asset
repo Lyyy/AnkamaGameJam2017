@@ -21,10 +21,10 @@ MonoBehaviour:
       de vous tenir si bien compagnie."
     nextQuestion: {fileID: 11400000, guid: 6531e35d4cca5df4fb72d47b7f2d16e9, type: 2}
   - text: Coupez notre communication.
-    reaction: 
+    reaction: "Allons, je sais que vous ne voulez pas r\xE9pondre cela."
     nextQuestion: {fileID: 11400000}
   - text: "J'aime vous voir vous \xE9teindre."
-    reaction: 
+    reaction: "Vraiment ? R\xE9fl\xE9chissez."
     nextQuestion: {fileID: 11400000}
   waitingReactions:
   - "Allons, je sais que vous ne voulez pas r\xE9pondre cela."
