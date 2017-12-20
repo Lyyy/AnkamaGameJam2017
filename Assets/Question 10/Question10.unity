@@ -680,11 +680,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 687929936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48333653cda77104aaf436a7cc4e5d6a, type: 3}
+  m_Script: {fileID: 11500000, guid: a807eb3fd129f7a45b8d126ea5b87d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
-  jump: 7
 --- !u!4 &687929938
 Transform:
   m_ObjectHideFlags: 0
@@ -1112,7 +1110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coupez notre communication
+  m_Text: Coupez notre communication.
 --- !u!222 &1065825856
 CanvasRenderer:
   m_ObjectHideFlags: 0

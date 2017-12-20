@@ -18,10 +18,7 @@ public class PopupBlock : MonoBehaviour
     {
         if (string.Equals(col.gameObject.name, "Player"))
         {
-            var color = spriteRenderer.color;
-            color *= 0.5f;
-            color.a = 1f;
-            spriteRenderer.color = color;
+            spriteRenderer.color = Color.gray;
             var text = GetComponentInChildren<Text>().text;
             if (string.Equals(validResponse, text))
                 Game.GetInstance().Answer(text);

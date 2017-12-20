@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VanishingBlock : MonoBehaviour {
 
@@ -7,6 +8,7 @@ public class VanishingBlock : MonoBehaviour {
     {
         if (string.Equals(col.gameObject.name, "Player"))
         {
+            Game.GetInstance().Answer(GetComponentInChildren<Text>().text);
             StartCoroutine(Explode());
         }
     }

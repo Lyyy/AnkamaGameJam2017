@@ -27,11 +27,11 @@ MonoBehaviour:
     reaction: "Vraiment ? R\xE9fl\xE9chissez."
     nextQuestion: {fileID: 11400000}
   waitingReactions:
-  - "Allons, je sais que vous ne voulez pas r\xE9pondre cela."
-  - "Vraiment ? R\xE9fl\xE9chissez."
   - L'intelligence n'est pas votre principal atout.
-  minWaitingDuration: 3
-  maxWaitingDuration: 6
+  - 
+  - 
+  minWaitingDuration: 6
+  maxWaitingDuration: 10
   globalReaction: 
   globalNextQuestion: {fileID: 0}
   soundTransition: 2

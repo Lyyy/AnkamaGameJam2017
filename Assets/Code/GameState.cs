@@ -53,6 +53,11 @@ public class GameState : MonoBehaviour
         get { return validAnswer; }
     }
 
+    public Response CurrentResponse
+    {
+        get { return currentResponse; }
+    }
+
     private void PrepareNextQuestion()
     {
         validAnswer = false;
