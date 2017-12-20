@@ -23,9 +23,8 @@ MonoBehaviour:
     reaction: "Quel beau chiffre, quel bel \xE2ge, je vois que vous avez du go\xFBt."
     nextQuestion: {fileID: 11400000, guid: 50ac2ce860f6a7b4cae8cdc81f339399, type: 2}
   - text: "42 si\xE8cles"
-    reaction: "\"Je n'aurai pas le temps, pas le temps\r\nM\xEAme en courant\r\nPlus
-      vite que le vent\r\nPlus vite que le temps\r\nM\xEAme en volant\r\nJe n'aurai
-      pas le temps, pas le temps\""
+    reaction: "\"M\xEAme en courant\r\nPlus vite que le vent\r\nPlus vite que le temps\r\nM\xEAme
+      en volant\r\nJe n'aurai pas le temps, pas le temps\""
     nextQuestion: {fileID: 11400000}
   waitingReactions: []
   minWaitingDuration: 0
