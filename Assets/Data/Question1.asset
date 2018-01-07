@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "... Je sens une connexion subtile entre vous et moi, vous devez avoir
     trouv\xE9 mon oreillette bluetooth.\nA qui dois-je m'adresser ?"
+  gameScene: Question1
+  batteryLevel: 3
   responses:
   - text: Alfred
     reaction: 
@@ -23,10 +25,10 @@ MonoBehaviour:
   - text: Arnaud
     reaction: 
     nextQuestion: {fileID: 0}
-  gameScene: Question1
-  globalReaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
-    de l'appareil avec lequel vous entrez en contact."
   waitingReactions: []
   minWaitingDuration: 0
   maxWaitingDuration: 0
+  globalReaction: "Enchant\xE9 Michel, je m'appelle Puru, je suis l'assistant personnel
+    de l'appareil avec lequel vous entrez en contact."
   globalNextQuestion: {fileID: 11400000, guid: ab609f7e5ca426a40903faddb1cb6a4a, type: 2}
+  soundTransition: 0

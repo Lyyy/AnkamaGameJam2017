@@ -12,6 +12,9 @@ public class GameState : MonoBehaviour
     public Question startQuestion;
     public bool debug = false;
 
+    public enum enumBatteryLevel { Zero, One, Three, Four, InCharge };
+    public GameObject battery;
+
     public GameObject debugPanel;
     public Button[] debugButtons;
 
@@ -32,9 +35,11 @@ public class GameState : MonoBehaviour
 	{
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(Camera.main.gameObject);
-	    instance = this;
+        instance = this;
 	    animator = GetComponent<Animator>();
 	    currentQuestion = startQuestion;
+        Battery.currentBatteryLevel = currentQuestion.batteryLevel;
+        battery.SetActive(true);
         debugPanel.SetActive(Application.isEditor);
         foreach (var button in debugButtons)
             button.onClick.AddListener(() => Answer(button.GetComponentInChildren<Text>().text));

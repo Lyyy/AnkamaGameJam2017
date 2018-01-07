@@ -6,6 +6,7 @@ public class Question : ScriptableObject
     [Multiline]
     public string question;
     public string gameScene;
+    public GameState.enumBatteryLevel batteryLevel;
     public Response[] responses;
     [Multiline]
     public string[] waitingReactions;

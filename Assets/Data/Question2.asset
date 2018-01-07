@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "\xCAtes-vous heureux de ne plus \xEAtre seul ?"
   gameScene: Question2
+  batteryLevel: 4
   responses:
   - text: Oui
     reaction: 
