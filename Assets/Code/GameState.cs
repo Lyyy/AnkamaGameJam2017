@@ -12,7 +12,7 @@ public class GameState : MonoBehaviour
     public Question startQuestion;
     public bool debug = false;
 
-    public enum enumBatteryLevel { Zero, One, Three, Four, InCharge };
+    public enum BatteryLevel { Zero, One, Three, Four, InCharge };
     public GameObject battery;
 
     public GameObject debugPanel;
@@ -38,8 +38,6 @@ public class GameState : MonoBehaviour
         instance = this;
 	    animator = GetComponent<Animator>();
 	    currentQuestion = startQuestion;
-        Battery.currentBatteryLevel = currentQuestion.batteryLevel;
-        battery.SetActive(true);
         debugPanel.SetActive(Application.isEditor);
         foreach (var button in debugButtons)
             button.onClick.AddListener(() => Answer(button.GetComponentInChildren<Text>().text));
@@ -68,6 +66,8 @@ public class GameState : MonoBehaviour
         validAnswer = false;
         question.text = null;
         reaction.text = null;
+        Battery.currentBatteryLevel = currentQuestion.batteryLevel;
+        Battery.UpdateSprite();
         for (var i = 0; i < currentQuestion.responses.Length; i++)
         {
             debugButtons[i].GetComponentInChildren<Text>().text = currentQuestion.responses[i].text;

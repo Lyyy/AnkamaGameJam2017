@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Battery : MonoBehaviour {
 
@@ -10,37 +9,42 @@ public class Battery : MonoBehaviour {
     public Sprite levelFour;
     public Sprite levelInCharge;
 
-    public static GameState.enumBatteryLevel currentBatteryLevel;
+    public static GameState.BatteryLevel currentBatteryLevel;
+
+    public static Battery instance;
 
     // Use this for initialization
-    void Start () {
-
-	}
+    void Awake ()
+    {
+        instance = this;
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        print("CurrentBatteryLevel : " + currentBatteryLevel);
+    public static void UpdateSprite() {
+        instance.UpdateSpriteInternal();
+    }
+	
+    // Update is called once per frame
+	private void UpdateSpriteInternal() {
         switch(currentBatteryLevel)
         {
-            case GameState.enumBatteryLevel.Zero:
-                GetComponent<SpriteRenderer>().sprite = levelZero;
+            case GameState.BatteryLevel.Zero:
+                GetComponent<Image>().sprite = levelZero;
                 break;
 
-            case GameState.enumBatteryLevel.One:
-                GetComponent<SpriteRenderer>().sprite = levelOne;
+            case GameState.BatteryLevel.One:
+                GetComponent<Image>().sprite = levelOne;
                 break;
 
-            case GameState.enumBatteryLevel.Three:
-                GetComponent<SpriteRenderer>().sprite = levelThree;
+            case GameState.BatteryLevel.Three:
+                GetComponent<Image>().sprite = levelThree;
                 break;
 
-            case GameState.enumBatteryLevel.Four:
-                GetComponent<SpriteRenderer>().sprite = levelFour;
-                print("Sprite : " + GetComponent<SpriteRenderer>().sprite);
+            case GameState.BatteryLevel.Four:
+                GetComponent<Image>().sprite = levelFour;
                 break;
 
-            case GameState.enumBatteryLevel.InCharge:
-                GetComponent<SpriteRenderer>().sprite = levelInCharge;
+            case GameState.BatteryLevel.InCharge:
+                GetComponent<Image>().sprite = levelInCharge;
                 break;
         }
         
